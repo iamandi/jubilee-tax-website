@@ -123,7 +123,7 @@ const MainBanner = () => {
                                 <div className="col-lg-2 col-sm-6 single-banner-boxes-conatiner">
                                     <div className="single-banner-boxes overlapGrid" >
                                         <Image src={businessStrategies} />
-                                        <Image src={businessStrategiesHover} className="upper-image" />
+                                        <Image src={businessStrategiesHover} className="upper-image" priority />
                                         <h3>
                                             Business Strategies
                                         </h3>

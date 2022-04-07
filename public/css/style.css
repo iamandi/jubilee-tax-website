@@ -2205,6 +2205,34 @@ Hello page Details CSS
   padding: 5%;
 }
 
+.hello-page-container .social-links2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hello-page-container .social-links2 .facebook {
+  color: #4267b2;
+}
+
+.hello-page-container .social-links2 .facebook:hover {
+  color: #44ce6f;
+}
+
+.hello-page-container .social-links2 .linkedin {
+  color: #0077b5;
+}
+
+.hello-page-container .social-links2 .linkedin:hover {
+  color: #44ce6f;
+}
+
 /*================================================
 Services Details CSS
 =================================================*/
@@ -4036,6 +4064,13 @@ Big Data Analytics Banner CSS
 
 .single-banner-boxes-conatiner {
   text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.single-banner-boxes-conatiner:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 /* Image changes on hover banner page feature icons */

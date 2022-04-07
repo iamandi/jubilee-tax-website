@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import * as Icon from 'react-feather';
+import { MapPin, PhoneCall, Calendar, Clock, UserCheck, Mail, Facebook, Linkedin } from 'react-feather';
 
 const Footer = () => {
 
@@ -21,7 +21,7 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <Link href="/contact">
-                                        <a>Book a Free Consultation</a>
+                                        <a>Schedule Consultation</a>
                                     </Link>
                                 </li>
                                 {/* <li>
@@ -44,11 +44,11 @@ const Footer = () => {
 
                             <ul className="footer-contact-info">
                                 <li>
-                                    <Icon.MapPin />
+                                    <MapPin />
                                     330 Franklin Street, Oakland, <br /> CA 94607, USA
                                 </li>
                                 <li>
-                                    <Icon.PhoneCall />
+                                    <PhoneCall />
                                     Phone: <a href="tel:5109091100"> (510) 909 1100</a>
                                 </li>
                             </ul>
@@ -61,20 +61,20 @@ const Footer = () => {
 
                             <ul className="footer-contact-info">
                                 <li>
-                                    <Icon.Calendar />
+                                    <Calendar />
                                     Monday - Friday
                                 </li>
                                 <li>
-                                    <Icon.Clock />
+                                    <Clock />
                                     8am - 5pm
                                 </li>
                                 <br />
                                 <li>
-                                    <Icon.Calendar />
+                                    <Calendar />
                                     Saturday - Sunday
                                 </li>
                                 <li>
-                                    <Icon.UserCheck />
+                                    <UserCheck />
                                     By Appointment Only
                                 </li>
                             </ul>
@@ -87,19 +87,19 @@ const Footer = () => {
 
                             <ul className="footer-contact-info">
                                 <li>
-                                    <Icon.Mail />
+                                    <Mail />
                                     Email: <a href="mailto:dinese@jubileetaxfinancial.com">dinese@jubileetaxfinancial.com</a>
                                 </li>
                             </ul>
                             <ul className="social-links">
                                 <li>
-                                    <a href="https://www.facebook.com/JubileeFinancial1/" className="facebook" target="_blank">
-                                        <Icon.Facebook />
+                                    <a href="https://www.facebook.com/JubileeFinancial1/" className="facebook" target="_blank" rel="noopener noreferrer" >
+                                        <Facebook />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.linkedin.com/company/jubilee-financial-&-business-solutions/" className="linkedin" target="_blank">
-                                        <Icon.Linkedin />
+                                    <a href="https://www.linkedin.com/company/jubilee-financial-&-business-solutions/" className="linkedin" target="_blank" rel="noopener noreferrer" >
+                                        <Linkedin />
                                     </a>
                                 </li>
                             </ul>

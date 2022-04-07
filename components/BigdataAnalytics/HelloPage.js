@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Facebook, Linkedin } from 'react-feather';
 
 const HelloPage = () => {
     // Get demo blocks
@@ -64,7 +65,7 @@ const HelloPage = () => {
                         Before you go!
                     </h2>
 
-                    <div className="btn-bigdata" style={{ marginTop: '2%' }}>
+                    <div className="btn-bigdata" style={{ paddingTop: '2%' }}>
                         <Link href="/contact">
                             <button className="pushable" style={{ width: '350px' }}>
                                 <span className="shadow" />
@@ -76,7 +77,7 @@ const HelloPage = () => {
                         </Link>
                     </div>
 
-                    <div className="btn-bigdata" style={{ marginTop: '2%' }}>
+                    <div className="btn-bigdata" style={{ paddingTop: '2%' }}>
                         <a href="tel:5109091100">
                             <button className="pushable" style={{ width: '350px' }}>
                                 <span className="shadow" />
@@ -88,7 +89,7 @@ const HelloPage = () => {
                         </a>
                     </div>
 
-                    <div className="btn-bigdata" style={{ marginTop: '2%' }}>
+                    <div className="btn-bigdata" style={{ paddingTop: '2%' }}>
                         <a href="mailto:dinese@jubileetaxfinancial.com">
                             <button className="pushable" style={{ width: '350px' }}>
                                 <span className="shadow" />
@@ -98,6 +99,19 @@ const HelloPage = () => {
                                 </span>
                             </button>
                         </a>
+                    </div>
+
+                    <div className="btn-bigdata" style={{ paddingTop: '5%' }}>
+                        <div className="social-links2" style={{ width: '350px' }}>
+                            <a style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} href="https://www.facebook.com/JubileeFinancial1/" className="facebook" target="_blank" rel="noopener noreferrer" >
+                                <Facebook size={'30%'} />
+                            </a>
+
+                            <a style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} href="https://www.linkedin.com/company/jubilee-financial-&-business-solutions/" className="linkedin" target="_blank" rel="noopener noreferrer" >
+                                <Linkedin size={'30%'} />
+                            </a>
+
+                        </div>
                     </div>
                 </div>
             </div>
