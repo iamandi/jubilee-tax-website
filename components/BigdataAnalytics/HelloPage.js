@@ -101,7 +101,7 @@ const HelloPage = () => {
                         </a>
                     </div>
 
-                    <div className="btn-bigdata" style={{ paddingTop: '5%' }}>
+                    <div className="btn-bigdata" style={{ paddingTop: '2%' }}>
                         <div className="social-links2" style={{ width: '350px' }}>
                             <a style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} href="https://www.facebook.com/JubileeFinancial1/" className="facebook" target="_blank" rel="noopener noreferrer" >
                                 <Facebook size={'30%'} />
