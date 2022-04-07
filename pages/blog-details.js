@@ -1,21 +1,21 @@
 import React from 'react';
-import Navbar from "@/components/_App/Navbar";
+import Navbar from "@/components/_App/NavbarStyleFour";
 import Footer from "@/components/_App/Footer";
-import PageBanner from '@/components/Common/PageBanner'; 
+import PageBanner from '@/components/Common/PageBanner';
 import * as Icon from 'react-feather';
 import BlogSidebar from '@/components/Blog/BlogSidebar';
- 
+
 const BlogDetails = () => {
     return (
         <>
             <Navbar />
 
-            <PageBanner pageTitle="Blog Details" /> 
+            <PageBanner pageTitle="Jubilee Financial Newsletter" />
 
             <div className="blog-details-area ptb-80">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-8 col-md-12">
+                        <div className="col-lg-12 col-md-12">
                             <div className="blog-details-desc">
                                 <div className="article-image">
                                     <img src="/images/blog-image/blog-details.jpg" alt="image" />
@@ -32,8 +32,8 @@ const BlogDetails = () => {
                                             </li>
                                         </ul>
                                     </div>
- 
-                                    <h2>The security risks of changing package owners</h2> 
+
+                                    <h2>The security risks of changing package owners</h2>
 
                                     <p>Quuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quia non numquam eius modi tempora incidunt ut labore et dolore magnam dolor sit amet, consectetur adipisicing.</p>
 
@@ -101,7 +101,7 @@ const BlogDetails = () => {
                                                     <img src="/images/blog-image/blog2.jpg" alt="image" />
                                                     <span className="post-nav-title">Prev</span>
                                                 </span>
-            
+
                                                 <span className="prev-link-info-wrapper">
                                                     <span className="prev-title">Don't buy a tech gift until you read these rules</span>
                                                     <span className="meta-wrapper">
@@ -111,7 +111,7 @@ const BlogDetails = () => {
                                             </a>
                                         </div>
                                     </div>
-            
+
                                     <div className="next-link-wrapper">
                                         <div className="info-next-link-wrapper">
                                             <a href="#">
@@ -121,7 +121,7 @@ const BlogDetails = () => {
                                                         <span className="date-post">January 21, 2021</span>
                                                     </span>
                                                 </span>
-            
+
                                                 <span className="image-next">
                                                     <img src="/images/blog-image/blog3.jpg" alt="image" />
                                                     <span className="post-nav-title">Next</span>
@@ -167,16 +167,16 @@ const BlogDetails = () => {
                                                                 <b className="fn">Steven Smith</b>
                                                                 <span className="says">says:</span>
                                                             </div>
-                
+
                                                             <div className="comment-metadata">
                                                                 April 24, 2019 at 10:59 am
                                                             </div>
                                                         </footer>
-                
+
                                                         <div className="comment-content">
                                                             <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen.</p>
                                                         </div>
-                
+
                                                         <div className="reply">
                                                             <a href="#" className="comment-reply-link">Reply</a>
                                                         </div>
@@ -192,16 +192,16 @@ const BlogDetails = () => {
                                                                     <b className="fn">Sarah Taylor</b>
                                                                     <span className="says">says:</span>
                                                                 </div>
-                    
+
                                                                 <div className="comment-metadata">
-                                                                    April 24, 2019 at 10:59 am 
+                                                                    April 24, 2019 at 10:59 am
                                                                 </div>
                                                             </footer>
-                    
+
                                                             <div className="comment-content">
                                                                 <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen.</p>
                                                             </div>
-                    
+
                                                             <div className="reply">
                                                                 <a href="#" className="comment-reply-link">Reply</a>
                                                             </div>
@@ -221,7 +221,7 @@ const BlogDetails = () => {
                                                     </div>
 
                                                     <div className="comment-metadata">
-                                                        April 24, 2019 at 10:59 am 
+                                                        April 24, 2019 at 10:59 am
                                                     </div>
                                                 </footer>
 
@@ -243,16 +243,16 @@ const BlogDetails = () => {
                                                                 <b className="fn">James Anderson</b>
                                                                 <span className="says">says:</span>
                                                             </div>
-                
+
                                                             <div className="comment-metadata">
                                                                 April 24, 2019 at 10:59 am
                                                             </div>
                                                         </footer>
-                
+
                                                         <div className="comment-content">
                                                             <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen.</p>
                                                         </div>
-                
+
                                                         <div className="reply">
                                                             <a href="#" className="comment-reply-link">Reply</a>
                                                         </div>
@@ -268,7 +268,7 @@ const BlogDetails = () => {
                                         <form className="comment-form">
                                             <p className="comment-notes">
                                                 <span id="email-notes">Your email address will not be published.</span>
-                                                Required fields are marked 
+                                                Required fields are marked
                                                 <span className="required">*</span>
                                             </p>
                                             <p className="comment-form-comment">
@@ -298,10 +298,6 @@ const BlogDetails = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className="col-lg-4 col-md-12">
-                            <BlogSidebar />
                         </div>
                     </div>
                 </div>

@@ -1,16 +1,16 @@
 import React from 'react';
-import Navbar from "@/components/_App/Navbar";
+import Navbar from "@/components/_App/NavbarStyleFour";
 import Footer from "@/components/_App/Footer";
 import PageBanner from '@/components/Common/PageBanner';
 import Link from 'next/link';
 import * as Icon from 'react-feather';
- 
+
 const Services5 = () => {
     return (
         <>
             <Navbar />
 
-            <PageBanner pageTitle="Services Style Five" />
+            <PageBanner pageTitle="Services" />
 
             <div className="agency-services-area ptb-80 pb-50">
                 <div className="container">
@@ -21,12 +21,12 @@ const Services5 = () => {
 
                                 <div className="content">
                                     <h3>
-                                        <Link href="/service-details">
-                                            <a>IT Professionals</a>
+                                        <Link href="/tax-planning">
+                                            <a>Tax Planning</a>
                                         </Link>
                                     </h3>
 
-                                    <Link href="/service-details">
+                                    <Link href="/tax-planning">
                                         <a className="read-more-btn">
                                             Read More <Icon.PlusCircle />
                                         </a>
@@ -41,12 +41,12 @@ const Services5 = () => {
 
                                 <div className="content">
                                     <h3>
-                                        <Link href="/service-details">
-                                            <a>Software Engineers</a>
+                                        <Link href="/insurance-services">
+                                            <a>Insurance Services</a>
                                         </Link>
                                     </h3>
 
-                                    <Link href="/service-details">
+                                    <Link href="/insurance-services">
                                         <a className="read-more-btn">
                                             Read More <Icon.PlusCircle />
                                         </a>
@@ -54,19 +54,19 @@ const Services5 = () => {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className="col-lg-4 col-sm-6 col-md-6">
                             <div className="agency-services-box">
-                            <img src="/images/agency-image/agency-services-img3.jpg" alt="image" />
+                                <img src="/images/agency-image/agency-services-img3.jpg" alt="image" />
 
                                 <div className="content">
                                     <h3>
-                                        <Link href="/service-details">
-                                            <a>Web Development</a>
+                                        <Link href="/living-benefits">
+                                            <a>Living Benefits</a>
                                         </Link>
                                     </h3>
 
-                                    <Link href="/service-details">
+                                    <Link href="/living-benefits">
                                         <a className="read-more-btn">
                                             Read More <Icon.PlusCircle />
                                         </a>
@@ -76,16 +76,16 @@ const Services5 = () => {
                         </div>
                         <div className="col-lg-4 col-sm-6 col-md-6">
                             <div className="agency-services-box">
-                            <img src="/images/agency-image/agency-services-img4.jpg" alt="image" />
+                                <img src="/images/agency-image/agency-services-img4.jpg" alt="image" />
 
                                 <div className="content">
                                     <h3>
-                                        <Link href="/service-details">
-                                            <a>SEO & Content</a>
+                                        <Link href="/401k-ira-rollover">
+                                            <a>401k and IRA Rollover</a>
                                         </Link>
                                     </h3>
 
-                                    <Link href="/service-details">
+                                    <Link href="/401k-ira-rollover">
                                         <a className="read-more-btn">
                                             Read More <Icon.PlusCircle />
                                         </a>
@@ -93,19 +93,19 @@ const Services5 = () => {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className="col-lg-4 col-sm-6 col-md-6">
                             <div className="agency-services-box">
-                            <img src="/images/agency-image/agency-services-img5.jpg" alt="image" />
+                                <img src="/images/agency-image/agency-services-img5.jpg" alt="image" />
 
                                 <div className="content">
                                     <h3>
-                                        <Link href="/service-details">
-                                            <a>Digital Marketing</a>
+                                        <Link href="/wealth-preservation">
+                                            <a>Wealth Preservation</a>
                                         </Link>
                                     </h3>
 
-                                    <Link href="/service-details">
+                                    <Link href="/wealth-preservation">
                                         <a className="read-more-btn">
                                             Read More <Icon.PlusCircle />
                                         </a>
@@ -113,19 +113,39 @@ const Services5 = () => {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className="col-lg-4 col-sm-6 col-md-6">
                             <div className="agency-services-box">
                                 <img src="/images/agency-image/agency-services-img6.jpg" alt="image" />
 
                                 <div className="content">
                                     <h3>
-                                        <Link href="/service-details">
-                                            <a>Data Analysts</a>
+                                        <Link href="/retirement-planning">
+                                            <a>Retirement Planning</a>
                                         </Link>
                                     </h3>
 
-                                    <Link href="/service-details">
+                                    <Link href="/retirement-planning">
+                                        <a className="read-more-btn">
+                                            Read More <Icon.PlusCircle />
+                                        </a>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-4 col-sm-6 col-md-6">
+                            <div className="agency-services-box">
+                                <img src="/images/agency-image/agency-services-img6.jpg" alt="image" />
+
+                                <div className="content">
+                                    <h3>
+                                        <Link href="/business-strategies">
+                                            <a>Business Strategies</a>
+                                        </Link>
+                                    </h3>
+
+                                    <Link href="/business-strategies">
                                         <a className="read-more-btn">
                                             Read More <Icon.PlusCircle />
                                         </a>

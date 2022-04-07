@@ -22,8 +22,8 @@ export default function App({ Component, pageProps }) {
     const store = useStore(pageProps.initialReduxState)
 
     return (
-        <ToastProvider 
-            placement = "bottom-left"
+        <ToastProvider
+            placement="bottom-left"
             autoDismissTimeout={6000}
             autoDismiss
         >

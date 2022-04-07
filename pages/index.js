@@ -25,22 +25,17 @@ const Index = () => {
             <MainBanner />
             <AboutUsContent />
 
-
-
             <Services />
-
-
 
             <DiscoverArea />
 
             {/* <IndustriesWeServe /> */}
-
-
             {/* <TeamStyleTwo /> */}
-            {/* <BigdataFunFacts />
-            <Feedback /> */}
+            {/* <BigdataFunFacts /> */}
+            {/* <Feedback /> */}
+
             <BlogPost />
-            {/* <NewsletterStyleTwo /> */}
+            <NewsletterStyleTwo />
 
             <HelloPage />
 

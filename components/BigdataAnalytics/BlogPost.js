@@ -5,13 +5,13 @@ import * as Icon from 'react-feather';
 const BlogPost = () => {
     return (
         <div className="blog-area pt-80 pb-50">
-			<div className="container">
-				<div className="section-title">
-					<h2>Our Recent Story</h2>
-					<div className="bar"></div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div className="container">
+                <div className="section-title">
+                    <h2>Our Recent Story</h2>
+                    <div className="bar"></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
-                
+
                 <div className="row justify-content-center">
                     <div className="col-lg-4 col-md-6">
                         <div className="single-blog-post-box bg-f4faff">
@@ -69,7 +69,7 @@ const BlogPost = () => {
                                     </Link>
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-                                
+
                                 <Link href="/blog-details">
                                     <a className="learn-more-btn">
                                         Read Story <Icon.Plus />
@@ -101,7 +101,7 @@ const BlogPost = () => {
                                     </Link>
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-                                
+
                                 <Link href="/blog-details">
                                     <a className="learn-more-btn">
                                         Read Story <Icon.Plus />
@@ -111,28 +111,28 @@ const BlogPost = () => {
                         </div>
                     </div>
                 </div>
-			</div>
+            </div>
 
             {/* Shape Images */}
-			<div className="shape1">
+            <div className="shape1">
                 <img src="/images/shape1.png" alt="shape" />
             </div>
-			<div className="shape2 rotateme">
+            <div className="shape2 rotateme">
                 <img src="/images/shape2.svg" alt="shape" />
             </div>
-			<div className="shape3">
+            <div className="shape3">
                 <img src="/images/shape3.svg" alt="shape" />
             </div>
-			<div className="shape4">
+            <div className="shape4">
                 <img src="/images/shape4.svg" alt="shape" />
             </div>
-			<div className="shape6 rotateme">
+            <div className="shape6 rotateme">
                 <img src="/images/shape4.svg" alt="shape" />
             </div>
-			<div className="shape7">
+            <div className="shape7">
                 <img src="/images/shape4.svg" alt="shape" />
             </div>
-			<div className="shape8 rotateme">
+            <div className="shape8 rotateme">
                 <img src="/images/shape2.svg" alt="shape" />
             </div>
         </div>

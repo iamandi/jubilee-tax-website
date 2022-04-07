@@ -57,7 +57,7 @@ const ContactForm = () => {
                 <div className="section-title">
                     <h2>Get In Touch With Us</h2>
                     <div className="bar"></div>
-                    <p>Anything On your Mind. We’ll Be Glad To Assist You!</p>
+                    <p>Anything On your Mind. We'll Be Glad To Assist You!</p>
                 </div>
 
                 <div className="row align-items-center">
@@ -70,16 +70,16 @@ const ContactForm = () => {
                             <div className="row">
                                 <div className="col-lg-12 col-md-12">
                                     <div className="form-group">
-                                        <input 
-                                            type="text" 
-                                            name="name" 
-                                            placeholder="Your Name" 
-                                            className="form-control" 
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            placeholder="Your Name"
+                                            className="form-control"
                                             value={contact.name}
                                             onChange={handleChange}
                                             ref={register({ required: true })}
                                         />
-                                        <div className='invalid-feedback' style={{display: 'block'}}>
+                                        <div className='invalid-feedback' style={{ display: 'block' }}>
                                             {errors.name && 'Name is required.'}
                                         </div>
                                     </div>
@@ -87,39 +87,39 @@ const ContactForm = () => {
 
                                 <div className="col-lg-12 col-md-12">
                                     <div className="form-group">
-                                        <input 
-                                            type="text" 
-                                            name="email" 
-                                            placeholder="Your email address" 
-                                            className="form-control" 
+                                        <input
+                                            type="text"
+                                            name="email"
+                                            placeholder="Your email address"
+                                            className="form-control"
                                             value={contact.email}
                                             onChange={handleChange}
                                             ref={register({ required: true, pattern: /^\S+@\S+$/i })}
                                         />
-                                        <div className='invalid-feedback' style={{display: 'block'}}>
+                                        <div className='invalid-feedback' style={{ display: 'block' }}>
                                             {errors.email && 'Email is required.'}
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="col-lg-6 col-md-6">
+                                <div className="col-lg-12 col-md-12">
                                     <div className="form-group">
-                                        <input 
-                                            type="text" 
-                                            name="number" 
-                                            placeholder="Your phone number" 
-                                            className="form-control" 
+                                        <input
+                                            type="text"
+                                            name="number"
+                                            placeholder="Your phone number"
+                                            className="form-control"
                                             value={contact.number}
                                             onChange={handleChange}
                                             ref={register({ required: true })}
                                         />
-                                        <div className='invalid-feedback' style={{display: 'block'}}>
+                                        <div className='invalid-feedback' style={{ display: 'block' }}>
                                             {errors.number && 'Number is required.'}
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="col-lg-6 col-md-6">
+                                {/* <div className="col-lg-6 col-md-6">
                                     <div className="form-group">
                                         <input 
                                             type="text" 
@@ -134,9 +134,9 @@ const ContactForm = () => {
                                             {errors.subject && 'Subject is required.'}
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
 
-                                <div className="col-lg-12 col-md-12">
+                                {/* <div className="col-lg-12 col-md-12">
                                     <div className="form-group">
                                         <textarea 
                                             name="text" 
@@ -159,13 +159,13 @@ const ContactForm = () => {
                                             By checking this, you agree to our <Link href="/term-condition"><a>Terms</a></Link> and <Link href="/privacy-policy"><a>Privacy policy</a></Link>.
                                         </label>
                                     </div>
-                                </div>
-            
+                                </div> */}
+
                                 <div className="col-lg-12 col-sm-12">
-                                    <button type="submit" className="btn btn-primary">Send Message</button>
+                                    <button type="submit" className="btn btn-primary">Send</button>
                                 </div>
                             </div>
-                        </form> 
+                        </form>
                     </div>
                 </div>
             </div>

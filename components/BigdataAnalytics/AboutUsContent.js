@@ -16,16 +16,6 @@ const AboutUsContent = () => {
                         <div className="repair-about-content">
                             <span className="sub-title">WE'VE GOT YOUR BACK</span>
                             <h2>Jubilee is here to help</h2>
-
-                            {/* <ul>
-                                <li><span><Icon.Check /> Experienced Professionals</span></li>
-                                <li><span><Icon.Check /> 5 star service and results</span></li>
-                                <li><span><Icon.Check /> Consistent Business Growth</span></li>
-                                <li><span><Icon.Check /> Friendly Service</span></li>
-                                <li><span><Icon.Check /> Personalized Consultation</span></li>
-                                <li><span><Icon.Check /> Maximizing Tax Returns</span></li>
-                            </ul> */}
-
                             <ul>
                                 <li>
                                     <h5>
@@ -61,7 +51,7 @@ const AboutUsContent = () => {
                                     <span className="shadow"></span>
                                     <span className="edge"></span>
                                     <span className="front">
-                                        Schedule a Free Consultation
+                                        Schedule Consultation
                                     </span>
                                 </button>
                             </Link>
@@ -91,7 +81,7 @@ const AboutUsContent = () => {
             <div className="shape10">
                 <img src="/images/agency-image/agency-shape2.png" alt="image" />
             </div>
-        </div >
+        </div>
     );
 }
 

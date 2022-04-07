@@ -53,12 +53,15 @@ const HelloPage = () => {
                     <div className="snowflake">
                         <span style={{ color: 'white', opacity: 0.6, fontSize: '1.6rem' }}>Ciao!</span>
                     </div>
+                    <div className="snowflake">
+                        <span style={{ color: 'white', opacity: 0.6, fontSize: '1.6rem' }}>Hello!</span>
+                    </div>
 
                 </div>
 
                 <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                     <h2 style={{ color: 'white', fontSize: '40px', fontWeight: '700' }}>
-                        HELLO!
+                        Before you go!
                     </h2>
 
                     <div className="btn-bigdata" style={{ marginTop: '2%' }}>
@@ -67,14 +70,14 @@ const HelloPage = () => {
                                 <span className="shadow" />
                                 <span className="edge" />
                                 <span className="front">
-                                    Book a Free Consultation
+                                    Schedule Consultation
                                 </span>
                             </button>
                         </Link>
                     </div>
 
                     <div className="btn-bigdata" style={{ marginTop: '2%' }}>
-                        <Link href="/contact">
+                        <a href="tel:5109091100">
                             <button className="pushable" style={{ width: '350px' }}>
                                 <span className="shadow" />
                                 <span className="edge" />
@@ -82,21 +85,20 @@ const HelloPage = () => {
                                     Call Us
                                 </span>
                             </button>
-                        </Link>
+                        </a>
                     </div>
 
                     <div className="btn-bigdata" style={{ marginTop: '2%' }}>
-                        <Link href="/contact">
+                        <a href="mailto:dinese@jubileetaxfinancial.com">
                             <button className="pushable" style={{ width: '350px' }}>
                                 <span className="shadow" />
                                 <span className="edge" />
                                 <span className="front">
-                                    Subscribe To Newsletter
+                                    Email Us
                                 </span>
                             </button>
-                        </Link>
+                        </a>
                     </div>
-
                 </div>
             </div>
         </div>

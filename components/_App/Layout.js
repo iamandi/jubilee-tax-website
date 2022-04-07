@@ -4,12 +4,13 @@ import GoTop from './GoTop'
 // import Sidebar from './Sidebar'
 
 const Layout = ({ children }) => {
+
     return (
         <>
             <Head>
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <title>StartP - React Next IT Startup & Digital Agency Template</title>
+                <title>Jubilee Tax and Financial Solutions, Inc</title>
             </Head>
 
             {children}

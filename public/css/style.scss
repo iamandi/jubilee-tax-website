@@ -89,8 +89,11 @@ This files table contents are outlined below>>>>>
 Default CSS
 =================================================*/
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-
 $font-family: 'Poppins', sans-serif;
+
+// @import url('https: //fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// $font-family: 'Montserrat',sans-serif;
+
 $light-green-color: #44ce6f;
 $white-color: #ffffff;
 $black-color: #0e314c;
@@ -173,6 +176,12 @@ h6 {
 }
 :focus {
 	outline: 0 !important;
+}
+.ptb-40 {
+	padding: {
+		top: 40px;
+		bottom: 40px;
+	}
 }
 .ptb-80 {
 	padding: {
@@ -790,6 +799,10 @@ Navbar CSS
 	}
 	&#header.headroom.is-sticky {
 		background-color: $black-color !important;
+
+		img {
+			height: 60px;
+		}
 		
 		.nav-item .nav-link {
 			color: $white-color;
@@ -866,11 +879,11 @@ Navbar CSS
 @media only screen and (max-width: 991px) {
 	#header {
 		padding: {
-			top: 5px;
-			bottom: 5px;
+			top: 0;
+			bottom: 0;
 		}
 		&.headroom {
-			border-bottom: 1px solid #eeeeee;
+			// border-bottom: 1px solid #eeeeee;
 
 			&.is-sticky {
 				border-bottom: none;
@@ -1969,6 +1982,16 @@ Bigdata Services CSS
 			}
 		}
 	}
+	////////////////
+	////////////////
+	////////////////
+	////////////////
+	////////////////
+	////////////////
+	////////////////
+	////////////////
+	////////////////
+	////////////////
 	&:hover {
 		transform: translateY(-10px);
 	}
@@ -2031,6 +2054,16 @@ Services Details CSS
 	h3 {
 		font-size: 22px;
 		margin-bottom: 15px;
+	}
+	p {
+		font-size: 1.02rem;
+	}
+	ul {	
+		li {
+			margin: 5px 5px;
+			font-size: 1.02rem;
+			color: #6084a4;
+		}
 	}
 	.services-details-accordion {
 		.accordion {
@@ -2099,7 +2132,7 @@ Services Details CSS
 }
 .services-details-area {
 	.separate {
-		margin-top: 80px;
+		margin-top: 20px;
 	}
 }
 .services-details-image {
@@ -3713,25 +3746,28 @@ Ready To Talk CSS
 Big Data Analytics Banner CSS
 ===============================*/
 .bigdata-analytics-banner {
-	background: {
-		// image: url(/images/bigdata-analytics/main-banner.jpg);
-		image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),url(/images/bigdata-analytics/test-img.jpg); // dark
-		// image: linear-gradient(0.25turn, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)),url(/images/bigdata-analytics/test-img.jpg);
-		position: center center;
-		size: cover;
-		repeat: no-repeat;	
-	}
+	position: relative; // to constrain next/image inside the parent div
+	// background: {
+	// 	// image: url(/images/bigdata-analytics/main-banner.jpg);
+	// 	// image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),url(/images/bigdata-analytics/bg-new.png); // dark
+	// 	// image: linear-gradient(0.25turn, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)),url(/images/bigdata-analytics/test-img.jpg);
+	// 	position: center center;
+	// 	size: cover;
+	// 	repeat: no-repeat;	
+	// }
 	padding: {
 		top: 280px;
 		bottom: 25px;
 	}
 }
+
 .bigdata-analytics-content {
 	max-width: 555px;
 
 	h1 {
 		color: #1f1b50;
-		// color: $white-color;
+		position: relative;
+		z-index: 2;
 		margin-bottom: 25px;
 		line-height: 1.4;
 		font: {
@@ -3741,7 +3777,8 @@ Big Data Analytics Banner CSS
 	}
 	p {
 		color: #1f1b50;
-		// color: #e9e9e9;
+		position: relative;
+		z-index: 2;
 		max-width: 470px;
 		line-height: 1.4;
 		font: {
@@ -3773,6 +3810,10 @@ Big Data Analytics Banner CSS
 	.display-br {
 		display: none;
 	}
+
+	// .display-br2 {
+	// 	display: none;
+	// }
 
 	&::before {
 		content: '';
@@ -4060,6 +4101,13 @@ Discover CSS
 	position: relative;
 	z-index: 1;
 	background: linear-gradient(135deg, #43e794 0%, #23bdb8 100%);
+
+	// horizontal polygon
+	margin-top: -120px;
+	padding-top: 120px;
+	padding-bottom: 120px;
+	-webkit-clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
+	clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
 }
 .discover-image {
 	position: relative;
@@ -4351,6 +4399,10 @@ Blog CSS
 	margin-bottom: 30px;
 	transition: $transition;
 	border-radius: 5px;
+
+	&:hover {
+		transform: translateY(-10px);
+	}
 
 	.entry-thumbnail {
 		a {
@@ -5789,7 +5841,7 @@ Page Title CSS
 	background: transparent url(/images/banner-bg1.jpg) right top no-repeat;
 	padding: {
 		top: 190px;
-		bottom: 100px;
+		bottom: 20px;
 	}
 	text-align: center;
 
@@ -5810,6 +5862,16 @@ FAQ CSS
 	padding: 60px;
 	background: $white-color;
 	border-radius: 10px;
+	padding: 1%;
+
+	h6 {
+		padding-top: 2%;
+	}
+
+	a {
+		text-decoration: revert;
+		color: revert;
+	}
 
 	.accordion {
 		list-style-type: none;
@@ -9640,6 +9702,35 @@ Agency Services CSS
 				color: $white-color;
 			}
 		}
+
+		.read-more-p {
+			display: inline-block;
+			border-radius: 30px;
+			padding: 9px 5px;
+			border: 1px solid #e6e6e6;
+			background-color: $white-color;
+			position: absolute;
+			transition: $transition;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: -22px;
+			opacity: 0;
+			visibility: hidden;
+		
+			font: {
+				size: 14px;
+				weight: 500;
+			}
+		
+			svg {
+				width: 15px;
+				margin-left: 2px;
+			}
+		
+			&:hover {
+				border-color: $light-green-color;
+			}
+		}
 	}
 	&:hover {
 		.content {
@@ -9649,6 +9740,10 @@ Agency Services CSS
 				transform: translateY(-10px);
 			}
 			.read-more-btn {
+				opacity: 1;
+				visibility: visible;
+			}
+			.read-more-p {
 				opacity: 1;
 				visibility: visible;
 			}
@@ -10490,10 +10585,10 @@ Go Top CSS
 
 @-webkit-keyframes snowflakes-fall {
 	0% {
-		top: -1%;
+		top: 100%;
 	}
 	100% {
-		top: 100%;
+		top: -10%;
 	}
 }
 // @-webkit-keyframes snowflakes-shake {
@@ -10512,10 +10607,10 @@ Go Top CSS
 // }
 @keyframes snowflakes-fall {
 	0% {
-		top: -1%;
+		top: 100%;
 	}
 	100% {
-		top: 100%;
+		top: -10%;
 	}
 }
 // @keyframes snowflakes-shake {
@@ -10668,4 +10763,20 @@ Go Top CSS
 	font-style: normal;
 	font-weight: bold;
 	margin-top: 1em;
+}
+
+// Tax videos page
+.video-responsive {
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	position: relative;
+	height: 0;
+}
+
+.video-responsive iframe {
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	position: absolute;
 }

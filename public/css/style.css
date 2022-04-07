@@ -159,6 +159,11 @@ h6 {
   outline: 0 !important;
 }
 
+.ptb-40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .ptb-80 {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -808,6 +813,10 @@ Navbar CSS
   background-color: #0e314c !important;
 }
 
+.navbar-color-white#header.headroom.is-sticky img {
+  height: 60px;
+}
+
 .navbar-color-white#header.headroom.is-sticky .nav-item .nav-link {
   color: #ffffff;
 }
@@ -884,11 +893,8 @@ Navbar CSS
 
 @media only screen and (max-width: 991px) {
   #header {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  #header.headroom {
-    border-bottom: 1px solid #eeeeee;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   #header.headroom.is-sticky {
     border-bottom: none;
@@ -2207,6 +2213,16 @@ Services Details CSS
   margin-bottom: 15px;
 }
 
+.services-details-desc p {
+  font-size: 1.02rem;
+}
+
+.services-details-desc ul li {
+  margin: 5px 5px;
+  font-size: 1.02rem;
+  color: #6084a4;
+}
+
 .services-details-desc .services-details-accordion .accordion {
   list-style-type: none;
   padding: 0;
@@ -2272,7 +2288,7 @@ Services Details CSS
 }
 
 .services-details-area .separate {
-  margin-top: 80px;
+  margin-top: 20px;
 }
 
 .services-details-image {
@@ -3881,11 +3897,7 @@ Ready To Talk CSS
 Big Data Analytics Banner CSS
 ===============================*/
 .bigdata-analytics-banner {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))), url(/images/bigdata-analytics/test-img.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/images/bigdata-analytics/test-img.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
   padding-top: 280px;
   padding-bottom: 25px;
 }
@@ -3896,6 +3908,8 @@ Big Data Analytics Banner CSS
 
 .bigdata-analytics-content h1 {
   color: #1f1b50;
+  position: relative;
+  z-index: 2;
   margin-bottom: 25px;
   line-height: 1.4;
   font-size: 50px;
@@ -3904,6 +3918,8 @@ Big Data Analytics Banner CSS
 
 .bigdata-analytics-content p {
   color: #1f1b50;
+  position: relative;
+  z-index: 2;
   max-width: 470px;
   line-height: 1.4;
   font-size: 18px;
@@ -4224,6 +4240,11 @@ Discover CSS
   position: relative;
   z-index: 1;
   background: linear-gradient(135deg, #43e794 0%, #23bdb8 100%);
+  margin-top: -120px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  -webkit-clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
 }
 
 .discover-image {
@@ -4527,6 +4548,11 @@ Blog CSS
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 5px;
+}
+
+.single-blog-post-box:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .single-blog-post-box .entry-thumbnail a {
@@ -6014,7 +6040,7 @@ Page Title CSS
   z-index: 1;
   background: transparent url(/images/banner-bg1.jpg) right top no-repeat;
   padding-top: 190px;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
   text-align: center;
 }
 
@@ -6033,6 +6059,17 @@ FAQ CSS
   padding: 60px;
   background: #ffffff;
   border-radius: 10px;
+  padding: 1%;
+}
+
+.faq-accordion h6 {
+  padding-top: 2%;
+}
+
+.faq-accordion a {
+  -webkit-text-decoration: revert;
+          text-decoration: revert;
+  color: revert;
 }
 
 .faq-accordion .accordion {
@@ -9952,6 +9989,34 @@ Agency Services CSS
   color: #ffffff;
 }
 
+.agency-services-box .content .read-more-p {
+  display: inline-block;
+  border-radius: 30px;
+  padding: 9px 5px;
+  border: 1px solid #e6e6e6;
+  background-color: #ffffff;
+  position: absolute;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -22px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.agency-services-box .content .read-more-p svg {
+  width: 15px;
+  margin-left: 2px;
+}
+
+.agency-services-box .content .read-more-p:hover {
+  border-color: #44ce6f;
+}
+
 .agency-services-box:hover .content {
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
@@ -9963,6 +10028,11 @@ Agency Services CSS
 }
 
 .agency-services-box:hover .content .read-more-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.agency-services-box:hover .content .read-more-p {
   opacity: 1;
   visibility: visible;
 }
@@ -10828,19 +10898,19 @@ Go Top CSS
 
 @-webkit-keyframes snowflakes-fall {
   0% {
-    top: -1%;
+    top: 100%;
   }
   100% {
-    top: 100%;
+    top: -10%;
   }
 }
 
 @keyframes snowflakes-fall {
   0% {
-    top: -1%;
+    top: 100%;
   }
   100% {
-    top: 100%;
+    top: -10%;
   }
 }
 
@@ -10982,5 +11052,20 @@ Go Top CSS
   font-style: normal;
   font-weight: bold;
   margin-top: 1em;
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 /*# sourceMappingURL=style.css.map */

@@ -65,48 +65,87 @@ const NavbarStyleFour = () => {
 
                                     <ul className="dropdown-menu">
                                         <li className="nav-item">
-                                            <Link href="/shop" activeClassName="active">
+                                            <Link href="/tax-planning" activeClassName="active">
                                                 <a onClick={toggleNavbar} className="nav-link">Tax Planning</a>
                                             </Link>
                                         </li>
 
                                         <li className="nav-item">
-                                            <Link href="/product-details" activeClassName="active">
+                                            <Link href="/insurance-services" activeClassName="active">
                                                 <a onClick={toggleNavbar} className="nav-link">Insurance Services</a>
                                             </Link>
                                         </li>
 
                                         <li className="nav-item">
-                                            <Link href="/cart" activeClassName="active">
+                                            <Link href="/living-benefits" activeClassName="active">
                                                 <a onClick={toggleNavbar} className="nav-link">Living Benefits</a>
                                             </Link>
                                         </li>
 
                                         <li className="nav-item">
-                                            <Link href="/checkout" activeClassName="active">
+                                            <Link href="/business-strategies" activeClassName="active">
                                                 <a onClick={toggleNavbar} className="nav-link">Business Strategies</a>
                                             </Link>
                                         </li>
 
                                         <li className="nav-item">
-                                            <Link href="/checkout" activeClassName="active">
+                                            <Link href="/wealth-preservation" activeClassName="active">
                                                 <a onClick={toggleNavbar} className="nav-link">Wealth Preservation</a>
                                             </Link>
                                         </li>
 
                                         <li className="nav-item">
-                                            <Link href="/checkout" activeClassName="active">
+                                            <Link href="/retirement-planning" activeClassName="active">
                                                 <a onClick={toggleNavbar} className="nav-link">Retirement Planning</a>
+                                            </Link>
+                                        </li>
+
+                                        <li className="nav-item">
+                                            <Link href="/401k-ira-rollover" activeClassName="active">
+                                                <a onClick={toggleNavbar} className="nav-link">401k and IRA Rollover</a>
                                             </Link>
                                         </li>
                                     </ul>
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link href="/about-1" activeClassName="active">
-                                        <a onClick={toggleNavbar} className="nav-link">Blog</a>
+                                    <Link href="/#" activeClassName="active">
+                                        <a onClick={e => e.preventDefault()} className="nav-link">
+                                            Help <Icon.ChevronDown />
+                                        </a>
                                     </Link>
+
+                                    <ul className="dropdown-menu">
+                                        <li className="nav-item">
+                                            <Link href="/faq" activeClassName="active">
+                                                <a onClick={toggleNavbar} className="nav-link">FAQ</a>
+                                            </Link>
+                                        </li>
+
+                                        <li className="nav-item">
+                                            <Link href="/insurance-services" activeClassName="active">
+                                                <a onClick={toggleNavbar} className="nav-link">Newsletter</a>
+                                            </Link>
+                                        </li>
+
+                                        <li className="nav-item">
+                                            <Link href="/tax-videos" activeClassName="active">
+                                                <a onClick={toggleNavbar} className="nav-link">Tax Videos</a>
+                                            </Link>
+                                        </li>
+
+                                        <li className="nav-item">
+                                            <Link href="/blog-details" activeClassName="active">
+                                                <a onClick={toggleNavbar} className="nav-link">Blog</a>
+                                            </Link>
+                                        </li>
+                                    </ul>
                                 </li>
+
+                                <li className="nav-item">
+                                    <a onClick={toggleNavbar} className="nav-link" href="https://totaledgemarketing.insuredmine.com/agent/session/loginone" target="_blank" rel="noopener noreferrer" activeClassName="active">Login</a>
+                                </li>
+
                             </ul>
                         </div>
 
