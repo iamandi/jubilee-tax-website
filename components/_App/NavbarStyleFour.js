@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from '@/utils/ActiveLink';
-import * as Icon from 'react-feather';
+import { ChevronDown } from 'react-feather';
 
 const NavbarStyleFour = () => {
     const [menu, setMenu] = React.useState(true)
@@ -59,7 +59,7 @@ const NavbarStyleFour = () => {
                                 <li className="nav-item">
                                     <Link href="/#" activeClassName="active">
                                         <a onClick={e => e.preventDefault()} className="nav-link">
-                                            Services <Icon.ChevronDown />
+                                            Services <ChevronDown />
                                         </a>
                                     </Link>
 
@@ -111,7 +111,7 @@ const NavbarStyleFour = () => {
                                 <li className="nav-item">
                                     <Link href="/#" activeClassName="active">
                                         <a onClick={e => e.preventDefault()} className="nav-link">
-                                            Help <Icon.ChevronDown />
+                                            Help <ChevronDown />
                                         </a>
                                     </Link>
 
@@ -149,7 +149,16 @@ const NavbarStyleFour = () => {
                                 </li>
 
                                 <li className="nav-item">
-                                    <a onClick={toggleNavbar} className="nav-link" href="https://totaledgemarketing.insuredmine.com/agent/session/loginone" target="_blank" rel="noopener noreferrer" activeClassName="active">Login</a>
+                                    <a
+                                        onClick={toggleNavbar}
+                                        className="nav-link"
+                                        href="https://totaledgemarketing.insuredmine.com/agent/session/loginone"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        activeClassName="active"
+                                    >
+                                        Login
+                                    </a>
                                 </li>
 
                             </ul>

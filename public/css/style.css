@@ -787,10 +787,13 @@ Navbar CSS
 
 .navbar-color-white .startp-nav nav .navbar-nav .nav-item a {
   color: #1f1b50;
+  text-shadow: 2px 2px #ffffff;
+  font-size: 1.2rem;
 }
 
 .navbar-color-white .startp-nav nav .navbar-nav .nav-item a:hover, .navbar-color-white .startp-nav nav .navbar-nav .nav-item a.active {
   color: #44ce6f;
+  text-shadow: 2px 2px #1f1b50;
 }
 
 .navbar-color-white .startp-nav nav .others-option .cart-wrapper-btn {
@@ -819,6 +822,7 @@ Navbar CSS
 
 .navbar-color-white#header.headroom.is-sticky .nav-item .nav-link {
   color: #ffffff;
+  text-shadow: 0px 0px #ffffff;
 }
 
 .navbar-color-white#header.headroom.is-sticky li .nav-item .nav-link {
