@@ -793,7 +793,6 @@ Navbar CSS
 
 .navbar-color-white .startp-nav nav .navbar-nav .nav-item a:hover, .navbar-color-white .startp-nav nav .navbar-nav .nav-item a.active {
   color: #44ce6f;
-  text-shadow: 2px 2px #1f1b50;
 }
 
 .navbar-color-white .startp-nav nav .others-option .cart-wrapper-btn {
