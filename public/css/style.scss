@@ -115,6 +115,11 @@ $gradient-color2: linear-gradient(
 );
 $transition: 0.5s;
 $font-size: 14px;
+// html {
+// 	max-width: 1550px;
+// 	margin: 0 auto; // Fills the page
+// 	position: relative; // Fix for absolute positioning
+// }
 body {
 	font-family: $font-family;
 	padding: 0;
@@ -9143,6 +9148,11 @@ Newsletter CSS
 	position: relative;
 	z-index: 1;
 
+	// This will restrict the container frow overflowing out of the bounds on TV screeen
+	overflow: hidden;
+	max-width: 1352px;
+	margin: 0 auto;
+
 	.container-fluid {
 		padding: {
 			left: 0;
@@ -9548,7 +9558,11 @@ Agency About CSS
 .agency-about-area {
 	position: relative;
 	z-index: 1;
+
+	// This will restrict the container frow overflowing out of the bounds on TV screeen
 	overflow: hidden;
+	max-width: 1352px;
+	margin: 0 auto;
 
 	.container-fluid {
 		padding: {

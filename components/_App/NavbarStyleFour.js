@@ -123,7 +123,7 @@ const NavbarStyleFour = () => {
                                         </li>
 
                                         <li className="nav-item">
-                                            <Link href="/insurance-services" activeClassName="active">
+                                            <Link href="/#newsletter-section" activeClassName="active">
                                                 <a onClick={toggleNavbar} className="nav-link">Newsletter</a>
                                             </Link>
                                         </li>

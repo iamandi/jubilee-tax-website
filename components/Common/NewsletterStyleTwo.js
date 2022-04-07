@@ -2,7 +2,7 @@ import React from 'react';
 
 const NewsletterStyleTwo = () => {
     return (
-        <div className="newsletter-area">
+        <div id="newsletter-section" className="newsletter-area">
             <div className="container-fluid">
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-12">
@@ -19,17 +19,18 @@ const NewsletterStyleTwo = () => {
                                 className="newsletter-form"
                                 method='post'
                                 action='https://feedburner.google.com/fb/a/mailverify?uri=PetaKode'
-                                onsubmit='window.open (&apos;https://feedburner.google.com/fb/a/mailverify?uri=PetaKode&apos;, &apos;popupwindow&apos;, &apos;scrollbars=yes,width=550,height=520&apos;);return true'
+                                // onSubmit='window.open(&apos;https://feedburner.google.com/fb/a/mailverify?uri=PetaKode&apos;, &apos;popupwindow&apos;, &apos;scrollbars=yes,width=550,height=520&apos;);return true'
+                                onSubmit={() => console.log('Submitted')}
                                 target='popupwindow'
                             >
                                 <input name='uri' type='hidden' value='ArlinaDesign' />
                                 <input name='loc' type='hidden' value='en_US' />
-                                <input type="email" className="input-newsletter" placeholder="Enter your email here" autocomplete='off' />
+                                <input type="email" className="input-newsletter" placeholder="Enter your email here" autoComplete='off' />
                                 <button type="submit" value='submit'>Subscribe</button>
                             </form>
 
-                            {/* <form action='https://feedburner.google.com/fb/a/mailverify?uri=PetaKode' class='subscribe-form' method='post' onsubmit='window.open (&apos;https://feedburner.google.com/fb/a/mailverify?uri=PetaKode&apos;, &apos;popupwindow&apos;, &apos;scrollbars=yes,width=550,height=520&apos;);return true' target='popupwindow'>
-                                <input name='uri' type='hidden' value='ArlinaDesign' /><input name='loc' type='hidden' value='en_US' /><input autocomplete='off' class='subscribe-css-email-field' name='email' placeholder='Enter your Email' /><input class='subscribe-css-email-button' title='' type='submit' value='submit' /></form> */}
+                            {/* <form action='https://feedburner.google.com/fb/a/mailverify?uri=PetaKode' class='subscribe-form' method='post' onSubmit='window.open (&apos;https://feedburner.google.com/fb/a/mailverify?uri=PetaKode&apos;, &apos;popupwindow&apos;, &apos;scrollbars=yes,width=550,height=520&apos;);return true' target='popupwindow'>
+                                <input name='uri' type='hidden' value='ArlinaDesign' /><input name='loc' type='hidden' value='en_US' /><input autoComplete='off' class='subscribe-css-email-field' name='email' placeholder='Enter your Email' /><input class='subscribe-css-email-button' title='' type='submit' value='submit' /></form> */}
 
                             <p>Jubilee Financial newsletters delivered straight to your inbox and it's free!</p>
                         </div>

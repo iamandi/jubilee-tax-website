@@ -9394,6 +9394,9 @@ Newsletter CSS
 .newsletter-area {
   position: relative;
   z-index: 1;
+  overflow: hidden;
+  max-width: 1352px;
+  margin: 0 auto;
 }
 
 .newsletter-area .container-fluid {
@@ -9829,6 +9832,8 @@ Agency About CSS
   position: relative;
   z-index: 1;
   overflow: hidden;
+  max-width: 1352px;
+  margin: 0 auto;
 }
 
 .agency-about-area .container-fluid {

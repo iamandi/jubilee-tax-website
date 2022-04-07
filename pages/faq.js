@@ -35,7 +35,7 @@ const FAQ = () => {
                                         <div>
                                             <div>
                                                 <p style={{ textAlign: 'left' }}>There are several ways to tell us your address has changed:</p>
-                                                <table className="table complex-table table-striped table-bordered alignleft" border="1" summary="Information on the different methods to do an address change" cellspacing="0" cellpadding="0">
+                                                <table className="table complex-table table-striped table-bordered alignleft" border="1" summary="Information on the different methods to do an address change" cellSpacing="0" cellPadding="0">
                                                     <caption><b>Methods to Change Your Address</b></caption>
                                                     <thead>
                                                         <tr className="first-child">
@@ -96,11 +96,11 @@ const FAQ = () => {
                                         </div>
                                         <div style={{ textAlign: 'left' }}>
                                             <h6>Subcategory:</h6>
-                                            <div><a href="https://www.irs.gov/faqs/irs-procedures/address-changes" hreflang="en">Address Changes</a></div>
+                                            <div><a href="https://www.irs.gov/faqs/irs-procedures/address-changes" hrefLang="en">Address Changes</a></div>
                                         </div>
                                         <div>
                                             <h6 style={{ textAlign: 'left' }}>Category:</h6>
-                                            <div style={{ textAlign: 'left' }}><a href="https://www.irs.gov/faqs/irs-procedures" hreflang="en">IRS Procedures</a></div>
+                                            <div style={{ textAlign: 'left' }}><a href="https://www.irs.gov/faqs/irs-procedures" hrefLang="en">IRS Procedures</a></div>
                                         </div>
                                     </div>
                                     </div>
@@ -144,11 +144,11 @@ const FAQ = () => {
                                             </div>
                                             <div>
                                                 <h6>Subcategory:</h6>
-                                                <div><a href="https://www.irs.gov/faqs/filing-requirements-status-dependents/dependents" hreflang="en">Dependents</a></div>
+                                                <div><a href="https://www.irs.gov/faqs/filing-requirements-status-dependents/dependents" hrefLang="en">Dependents</a></div>
                                             </div>
                                             <div>
                                                 <h6>Category:</h6>
-                                                <div><a href="https://www.irs.gov/faqs/filing-requirements-status-dependents" hreflang="en">Filing Requirements, Status, Dependents</a></div>
+                                                <div><a href="https://www.irs.gov/faqs/filing-requirements-status-dependents" hrefLang="en">Filing Requirements, Status, Dependents</a></div>
                                             </div>
                                         </div>
                                         <div>
@@ -185,11 +185,11 @@ const FAQ = () => {
                                         </div>
                                         <div>
                                             <h6>Subcategory:</h6>
-                                            <div><a href="https://www.irs.gov/faqs/filing-requirements-status-dependents/filing-requirements" hreflang="en">Filing Requirements</a></div>
+                                            <div><a href="https://www.irs.gov/faqs/filing-requirements-status-dependents/filing-requirements" hrefLang="en">Filing Requirements</a></div>
                                         </div>
                                         <div>
                                             <h6>Category:</h6>
-                                            <div><a href="https://www.irs.gov/faqs/filing-requirements-status-dependents" hreflang="en">Filing Requirements, Status, Dependents</a></div>
+                                            <div><a href="https://www.irs.gov/faqs/filing-requirements-status-dependents" hrefLang="en">Filing Requirements, Status, Dependents</a></div>
                                         </div>
                                     </div>
                                 </AccordionItemPanel>
@@ -222,11 +222,11 @@ const FAQ = () => {
                                             </div>
                                             <div>
                                                 <h6>Subcategory:</h6>
-                                                <div><a href="https://www.irs.gov/faqs/irs-procedures/refund-inquiries" hreflang="en">Refund Inquiries</a></div>
+                                                <div><a href="https://www.irs.gov/faqs/irs-procedures/refund-inquiries" hrefLang="en">Refund Inquiries</a></div>
                                             </div>
                                             <div>
                                                 <h6>Category:</h6>
-                                                <div><a href="https://www.irs.gov/faqs/irs-procedures" hreflang="en">IRS Procedures</a></div>
+                                                <div><a href="https://www.irs.gov/faqs/irs-procedures" hrefLang="en">IRS Procedures</a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -260,11 +260,11 @@ const FAQ = () => {
                                             </div>
                                             <div>
                                                 <h6>Subcategory:</h6>
-                                                <div><a href="https://www.irs.gov/faqs/filing-requirements-status-dependents/filing-status" hreflang="en">Filing Status</a></div>
+                                                <div><a href="https://www.irs.gov/faqs/filing-requirements-status-dependents/filing-status" hrefLang="en">Filing Status</a></div>
                                             </div>
                                             <div>
                                                 <h6>Category:</h6>
-                                                <div><a href="https://www.irs.gov/faqs/filing-requirements-status-dependents" hreflang="en">Filing Requirements, Status, Dependents</a></div>
+                                                <div><a href="https://www.irs.gov/faqs/filing-requirements-status-dependents" hrefLang="en">Filing Requirements, Status, Dependents</a></div>
                                             </div>
                                         </div>
                                         <div>
@@ -312,11 +312,11 @@ const FAQ = () => {
                                             </div>
                                             <div>
                                                 <h6>Subcategory:</h6>
-                                                <div><a href="https://www.irs.gov/faqs/irs-procedures/amended-returns-form-1040x" hreflang="en">Amended Returns &amp; Form 1040X</a></div>
+                                                <div><a href="https://www.irs.gov/faqs/irs-procedures/amended-returns-form-1040x" hrefLang="en">Amended Returns &amp; Form 1040X</a></div>
                                             </div>
                                             <div>
                                                 <h6>Category:</h6>
-                                                <div><a href="https://www.irs.gov/faqs/irs-procedures" hreflang="en">IRS Procedures</a></div>
+                                                <div><a href="https://www.irs.gov/faqs/irs-procedures" hrefLang="en">IRS Procedures</a></div>
                                             </div>
                                         </div>
                                         <div>
@@ -354,11 +354,11 @@ const FAQ = () => {
                                                     </div>
                                                     <div>
                                                         <h6>Subcategory:</h6>
-                                                        <div><a href="https://www.irs.gov/faqs/irs-procedures/refund-inquiries" hreflang="en">Refund Inquiries</a></div>
+                                                        <div><a href="https://www.irs.gov/faqs/irs-procedures/refund-inquiries" hrefLang="en">Refund Inquiries</a></div>
                                                     </div>
                                                     <div>
                                                         <h6>Category:</h6>
-                                                        <div><a href="https://www.irs.gov/faqs/irs-procedures" hreflang="en">IRS Procedures</a></div>
+                                                        <div><a href="https://www.irs.gov/faqs/irs-procedures" hrefLang="en">IRS Procedures</a></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -411,11 +411,11 @@ const FAQ = () => {
                                             </div>
                                             <div>
                                                 <h6>Subcategory:</h6>
-                                                <div><a href="https://www.irs.gov/faqs/estimated-tax/individuals" hreflang="en">Individuals </a></div>
+                                                <div><a href="https://www.irs.gov/faqs/estimated-tax/individuals" hrefLang="en">Individuals </a></div>
                                             </div>
                                             <div>
                                                 <h6>Category:</h6>
-                                                <div><a href="https://www.irs.gov/faqs/estimated-tax" hreflang="en">Estimated Tax</a></div>
+                                                <div><a href="https://www.irs.gov/faqs/estimated-tax" hrefLang="en">Estimated Tax</a></div>
                                             </div>
                                         </div>
                                         <div>
@@ -464,11 +464,11 @@ const FAQ = () => {
                                                     </div>
                                                     <div>
                                                         <h6>Subcategory:</h6>
-                                                        <div><a href="https://www.irs.gov/faqs/social-security-income/regular-disability-benefits" hreflang="en">Regular &amp; Disability Benefits</a></div>
+                                                        <div><a href="https://www.irs.gov/faqs/social-security-income/regular-disability-benefits" hrefLang="en">Regular &amp; Disability Benefits</a></div>
                                                     </div>
                                                     <div>
                                                         <h6>Category:</h6>
-                                                        <div><a href="https://www.irs.gov/faqs/social-security-income" hreflang="en">Social Security Income</a></div>
+                                                        <div><a href="https://www.irs.gov/faqs/social-security-income" hrefLang="en">Social Security Income</a></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -497,11 +497,11 @@ const FAQ = () => {
                                             </div>
                                             <div>
                                                 <h6>Subcategory:</h6>
-                                                <div><a href="https://www.irs.gov/faqs/irs-procedures/general-procedural-questions" hreflang="en">General Procedural Questions</a></div>
+                                                <div><a href="https://www.irs.gov/faqs/irs-procedures/general-procedural-questions" hrefLang="en">General Procedural Questions</a></div>
                                             </div>
                                             <div>
                                                 <h6>Category:</h6>
-                                                <div><a href="https://www.irs.gov/faqs/irs-procedures" hreflang="en">IRS Procedures</a></div>
+                                                <div><a href="https://www.irs.gov/faqs/irs-procedures" hrefLang="en">IRS Procedures</a></div>
                                             </div>
                                         </div>
                                         <div>

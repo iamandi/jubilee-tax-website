@@ -15,7 +15,6 @@ import Footer from "@/components/_App/Footer";
 import AboutUsContent from '@/components/BigdataAnalytics/AboutUsContent';
 // import AboutUsContent from '@/components/PCRepair/AboutUsContent';
 
-// import ParticlesPage from '@/components/BigdataAnalytics/ParticlesPage';
 import HelloPage from '@/components/BigdataAnalytics/HelloPage';
 
 const Index = () => {
