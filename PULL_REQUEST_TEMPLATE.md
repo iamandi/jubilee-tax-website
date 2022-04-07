@@ -6,3 +6,4 @@ Doneness:
 -   [ ] Preview of medium blogs under "Our recent story" section
 -   [ ] Youtube channel and video uploads
 -   [ ] Youtube video playlist display on Tax Videos page
+-   [ ] Add scrolling and other animations
