@@ -127,8 +127,9 @@ a:hover, a:focus {
 }
 
 p {
-  color: #6084a4;
+  color: #1f1b50;
   line-height: 1.8;
+  font-size: 1.1rem;
 }
 
 p:last-child {
@@ -9038,6 +9039,7 @@ ML About CSS
 .about-area {
   position: relative;
   z-index: 1;
+  padding-top: 4rem;
 }
 
 .ml-about-img {

@@ -33,7 +33,17 @@ const MainBanner = () => {
     return (
         <>
             <div className="bigdata-analytics-banner">
-                <Image className='hide-cover' placeholder="blur" blurDataURL={rgbDataURL(237, 181, 6)} src='/images/bigdata-analytics/bg-new-half-res.png' alt='bg pic' layout='fill' objectFit='cover' objectPosition='center' priority={false} />
+                <Image
+                    className='hide-cover'
+                    placeholder="blur"
+                    blurDataURL={rgbDataURL(237, 181, 6)}
+                    src='/images/bigdata-analytics/bg-new-half-res.png'
+                    alt='bg pic'
+                    layout='fill'
+                    objectFit='cover'
+                    objectPosition='center'
+                    priority
+                />
                 <div className="container">
                     <div className="bigdata-analytics-content">
                         <h1>Make Smarter Financial Decisions</h1>

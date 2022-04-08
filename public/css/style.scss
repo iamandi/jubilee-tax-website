@@ -154,8 +154,9 @@ a {
 	}
 }
 p {
-	color: $paragraph-color;
+	color: $default-color;
 	line-height: 1.8;
+	font-size: 1.1rem;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -8800,6 +8801,7 @@ ML About CSS
 .about-area {
 	position: relative;
 	z-index: 1;
+	padding-top: 4rem;
 }
 .ml-about-img {
 	text-align: center;

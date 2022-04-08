@@ -14,7 +14,7 @@ const About1 = () => {
 
             <PageBanner pageTitle="About Us" />
 
-            <div className="about-area" style={{ paddingTop: '4rem' }}>
+            <div className="about-area">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-md-12">
