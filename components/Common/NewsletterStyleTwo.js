@@ -1,6 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form'
+import axios from 'axios'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+const MySwal = withReactContent(Swal)
+// import baseUrl from '../../utils/baseUrl'
+
+const alertContent = () => {
+    MySwal.fire({
+        title: 'Congratulations!',
+        text: 'You have subscribed to Jubilee financial newsletter',
+        icon: 'success',
+        timer: 2000,
+        timerProgressBar: true,
+        showConfirmButton: false,
+    })
+}
+
+// Form initial state
+const INITIAL_STATE = {
+    email: "",
+};
+
 
 const NewsletterStyleTwo = () => {
+    const [contact, setContact] = useState(INITIAL_STATE);
+    const { register, handleSubmit, reset, errors } = useForm();
+    const handleChange = e => {
+        const { name, value } = e.target;
+        setContact(prevState => ({ ...prevState, [name]: value }));
+    }
+
+    const onSubmit = async e => {
+        // e.preventDefault();
+        try {
+            const url = `/api/newsletter`;
+
+            const payload = { email: contact.email };
+
+            await axios.post(url, payload);
+
+            setContact(INITIAL_STATE);
+            alertContent();
+            reset();
+        } catch (error) {
+            console.error(error)
+        }
+    };
+
     return (
         <div id="newsletter-section" className="newsletter-area">
             <div className="container-fluid">
@@ -17,20 +64,58 @@ const NewsletterStyleTwo = () => {
 
                             <form
                                 className="newsletter-form"
-                                method='post'
-                                action='https://feedburner.google.com/fb/a/mailverify?uri=PetaKode'
-                                // onSubmit='window.open(&apos;https://feedburner.google.com/fb/a/mailverify?uri=PetaKode&apos;, &apos;popupwindow&apos;, &apos;scrollbars=yes,width=550,height=520&apos;);return true'
-                                onSubmit={() => console.log('Submitted')}
-                                target='popupwindow'
+                                onSubmit={handleSubmit(onSubmit)}
                             >
                                 <input name='uri' type='hidden' value='ArlinaDesign' />
                                 <input name='loc' type='hidden' value='en_US' />
-                                <input type="email" className="input-newsletter" placeholder="Enter your email here" autoComplete='off' />
+                                {/* <input type="email" className="input-newsletter" placeholder="Enter your email here" autoComplete='off' /> */}
+                                <input
+                                    type="text"
+                                    name="email"
+                                    placeholder="Your email address"
+                                    className="input-newsletter"
+                                    value={contact.email}
+                                    onChange={handleChange}
+                                    ref={register({ required: true, pattern: /^\S+@\S+$/i })}
+                                />
+
+
                                 <button type="submit" value='submit'>Subscribe</button>
+
+                                <div className='invalid-feedback' style={{ display: 'block' }}>
+                                    {errors.email && 'Email is required.'}
+                                </div>
                             </form>
 
-                            {/* <form action='https://feedburner.google.com/fb/a/mailverify?uri=PetaKode' class='subscribe-form' method='post' onSubmit='window.open (&apos;https://feedburner.google.com/fb/a/mailverify?uri=PetaKode&apos;, &apos;popupwindow&apos;, &apos;scrollbars=yes,width=550,height=520&apos;);return true' target='popupwindow'>
-                                <input name='uri' type='hidden' value='ArlinaDesign' /><input name='loc' type='hidden' value='en_US' /><input autoComplete='off' class='subscribe-css-email-field' name='email' placeholder='Enter your Email' /><input class='subscribe-css-email-button' title='' type='submit' value='submit' /></form> */}
+                            {/* <div className="col-lg-6 col-md-12">
+                                <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
+                                    <div className="row">
+
+                                        <div className="col-lg-12 col-md-12">
+                                            <div className="form-group">
+                                                <input
+                                                    type="text"
+                                                    name="email"
+                                                    placeholder="Your email address"
+                                                    className="form-control"
+                                                    value={contact.email}
+                                                    onChange={handleChange}
+                                                    ref={register({ required: true, pattern: /^\S+@\S+$/i })}
+                                                />
+                                                <div className='invalid-feedback' style={{ display: 'block' }}>
+                                                    {errors.email && 'Email is required.'}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+
+                                        <div className="col-lg-12 col-sm-12">
+                                            <button type="submit" className="btn btn-primary">Send Message</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div> */}
 
                             <p>Jubilee Financial newsletters delivered straight to your inbox and it's free!</p>
                         </div>

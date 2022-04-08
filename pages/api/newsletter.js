@@ -10,26 +10,22 @@ const transporter = {
 const mailer = nodemailer.createTransport(sgTransport(transporter));
 
 export default async (req, res) => {
-    const { name, email, number, subject, text } = req.body;
+    const { email } = req.body;
+
     const data = {
         to: process.env.SENDGRID_EMAIL_TO,
         from: process.env.SENDGRID_EMAIL_FROM,
-        subject: 'Jubilee website contact form lead',
-        text: text,
+        subject: 'Jubilee financial newsletter subscription',
         html: `
-            <b>From:</b> ${name} <br /> 
+            <b>Please add following email to the subscription list: </b> <br />
             <b>Email:</b> ${email} <br />
-            <b>Number:</b> ${number} <br /> 
-            <b>Subject:</b> ${subject} <br /> 
-            <b>Message:</b> ${text} 
         `
     };
-    // console.log('/api/contact - data', data);
 
     try {
         const response = await mailer.sendMail(data);
-        console.log({ response })
-        res.status(200).send("Email send successfully")
+        console.log({ response });
+        res.status(200).send("Email send successfully");
     } catch (error) {
         console.error(error);
         res.status(500).send("Error proccessing charge");

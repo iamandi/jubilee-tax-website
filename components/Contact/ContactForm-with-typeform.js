@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import Link from 'next/link'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 const MySwal = withReactContent(Swal)
-// import baseUrl from '../../utils/baseUrl'
+import baseUrl from '../../utils/baseUrl'
+
+import { Widget } from '@typeform/embed-react'
 
 const alertContent = () => {
     MySwal.fire({
@@ -28,30 +31,33 @@ const INITIAL_STATE = {
 
 const ContactForm = () => {
     const [contact, setContact] = useState(INITIAL_STATE);
-    const { register, handleSubmit, reset, errors } = useForm();
+    const { register, handleSubmit, errors } = useForm();
     const handleChange = e => {
         const { name, value } = e.target;
         setContact(prevState => ({ ...prevState, [name]: value }));
-        // console.log(contact);
+        console.log(contact)
     }
 
     const onSubmit = async e => {
         // e.preventDefault();
         try {
-            const url = `/api/contact`;
-
+            const url = `${baseUrl}/api/contact`;
             const { name, email, number, subject, text } = contact;
             const payload = { name, email, number, subject, text };
-
             await axios.post(url, payload);
-
+            console.log(url);
             setContact(INITIAL_STATE);
             alertContent();
-            reset();
         } catch (error) {
-            console.error(error)
+            console.log(error)
         }
     };
+
+    const widgetContainerStyle = {
+        width: '100%',
+        height: 400,
+        margin: '20px auto',
+    }
 
     return (
         <div className="contact-area ptb-80">
@@ -63,11 +69,16 @@ const ContactForm = () => {
                 </div>
 
                 <div className="row align-items-center">
-                    <div className="col-lg-6 col-md-12">
-                        <img src="/images/contact-img.png" alt="image" />
-                    </div>
+                    <Widget
+                        id={`m2Awzmuw`}
+                        style={widgetContainerStyle}
+                        medium="snippet"
+                        hidden={{ title: 'Jubilee Contact Form', desc: 'collect leads' }}
+                        transitiveSearchParams={['jubilee', 'bar']}
+                        iframeProps={{ title: 'JubileeContactForm' }}
+                    />
 
-                    <div className="col-lg-6 col-md-12">
+                    {/* <div className="col-lg-6 col-md-12">
                         <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
                             <div className="row">
                                 <div className="col-lg-12 col-md-12">
@@ -104,7 +115,7 @@ const ContactForm = () => {
                                     </div>
                                 </div>
 
-                                <div className="col-lg-6 col-md-6">
+                                <div className="col-lg-12 col-md-12">
                                     <div className="form-group">
                                         <input
                                             type="text"
@@ -121,53 +132,54 @@ const ContactForm = () => {
                                     </div>
                                 </div>
 
-                                <div className="col-lg-6 col-md-6">
+                                {/* <div className="col-lg-6 col-md-6">
                                     <div className="form-group">
-                                        <input
-                                            type="text"
-                                            name="subject"
-                                            placeholder="Your Subject"
-                                            className="form-control"
+                                        <input 
+                                            type="text" 
+                                            name="subject" 
+                                            placeholder="Your Subject" 
+                                            className="form-control" 
                                             value={contact.subject}
                                             onChange={handleChange}
                                             ref={register({ required: true })}
                                         />
-                                        <div className='invalid-feedback' style={{ display: 'block' }}>
+                                        <div className='invalid-feedback' style={{display: 'block'}}>
                                             {errors.subject && 'Subject is required.'}
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
 
-                                <div className="col-lg-12 col-md-12">
+                    {/* <div className="col-lg-12 col-md-12">
                                     <div className="form-group">
-                                        <textarea
-                                            name="text"
-                                            cols="30"
-                                            rows="5"
-                                            placeholder="Write your message..."
-                                            className="form-control"
+                                        <textarea 
+                                            name="text" 
+                                            cols="30" 
+                                            rows="5" 
+                                            placeholder="Write your message..." 
+                                            className="form-control" 
                                             value={contact.text}
                                             onChange={handleChange}
                                             ref={register({ required: true })}
                                         />
-                                        <div className='invalid-feedback' style={{ display: 'block' }}>
+                                        <div className='invalid-feedback' style={{display: 'block'}}>
                                             {errors.text && 'Message is required.'}
                                         </div>
                                     </div>
 
                                     <div className="form-check">
+                                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                         <label className="form-check-label" htmlFor="flexCheckDefault">
-                                            By clicking this button, you agree to our Terms and Privacy policy.
+                                            By checking this, you agree to our <Link href="/term-condition"><a>Terms</a></Link> and <Link href="/privacy-policy"><a>Privacy policy</a></Link>.
                                         </label>
                                     </div>
-                                </div>
+                                </div> */}
 
-                                <div className="col-lg-12 col-sm-12">
-                                    <button type="submit" className="btn btn-primary">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
+                    {/* <div className="col-lg-12 col-sm-12">
+                        <button type="submit" className="btn btn-primary">Send</button>
                     </div>
+                </div>
+            </form>
+        </div> */}
                 </div>
             </div>
         </div>
