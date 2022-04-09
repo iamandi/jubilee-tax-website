@@ -5,8 +5,8 @@
     "main": "index.js",
     "scripts": {
         "dev": "next dev -- -p 5005",
-        "build": "next build",
-        "start": "next start -- -p 5006"
+        "build-test": "next build",
+        "start-test": "next start -- -p 5006"
     },
     "author": "Aniruddha Kawade",
     "dependencies": {
