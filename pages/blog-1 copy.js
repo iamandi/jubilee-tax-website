@@ -4,14 +4,14 @@ import Footer from "@/components/_App/Footer";
 import PageBanner from '@/components/Common/PageBanner';
 import * as Icon from 'react-feather';
 import Link from 'next/link';
-
+ 
 const Blog1 = () => {
     return (
         <>
             <Navbar />
 
             <PageBanner pageTitle="Blog Grid" />
-
+ 
             <div className="blog-area ptb-80">
                 <div className="container">
                     <div className="row justify-content-center">
@@ -97,7 +97,7 @@ const Blog1 = () => {
                                     </div>
                                 </div>
 
-                                <div className="blog-post-content">
+                                <div className="blog-post-content"> 
                                     <h3>
                                         <Link href="/blog-details">
                                             <a>Protect Your Workplace from Cyber Attacks</a>
@@ -116,7 +116,7 @@ const Blog1 = () => {
                                 </div>
                             </div>
                         </div>
-
+                        
                         <div className="col-lg-4 col-md-6">
                             <div className="single-blog-post">
                                 <div className="blog-image">
@@ -218,20 +218,20 @@ const Blog1 = () => {
                                 </div>
                             </div>
                         </div>
-
+                        
                         {/* Pagination */}
                         <div className="col-lg-12 col-md-12">
                             <div className="pagination-area">
                                 <nav aria-label="Page navigation">
                                     <ul className="pagination justify-content-center">
                                         <li className="page-item"><a className="page-link" href="#">Prev</a></li>
-
+                                        
                                         <li className="page-item active"><a className="page-link" href="#">1</a></li>
-
+                                        
                                         <li className="page-item"><a className="page-link" href="#">2</a></li>
-
+                                        
                                         <li className="page-item"><a className="page-link" href="#">3</a></li>
-
+                                        
                                         <li className="page-item"><a className="page-link" href="#">Next</a></li>
                                     </ul>
                                 </nav>
@@ -239,7 +239,7 @@ const Blog1 = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+		    </div>
 
             <Footer />
         </>

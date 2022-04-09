@@ -1,254 +1,154 @@
-import React from 'react';
-import Navbar from "@/components/_App/Navbar";
+import React, { useState, useEffect } from 'react';
+import { Calendar, User, ArrowRight } from 'react-feather';
+
+import Navbar from "@/components/_App/NavbarStyleFour";
 import Footer from "@/components/_App/Footer";
 import PageBanner from '@/components/Common/PageBanner';
-import * as Icon from 'react-feather';
-import Link from 'next/link';
-import BlogSidebar from '@/components/Blog/BlogSidebar';
- 
+
+import sortAndSetCategory from "@/utils/SortAndSetCategeory";
+import ShortenText from '@/utils/ShortenText';
+import ToText from '@/utils/ToText';
+
+const MEDIUM_BLOG = 'https://medium.com/@bendaviesromano'
+const MEDIUM_FEED_BLOG = 'https://medium.com/feed/@bendaviesromano'
+
 const Blog2 = () => {
+    const [itemRows, setItemRows] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    const mediumURL = `https://api.rss2json.com/v1/api.json?rss_url=${MEDIUM_FEED_BLOG}`;
+
+    useEffect(() => {
+        fetch(mediumURL)
+            .then((res) => res.json())
+            .then((data) => {
+                const {
+                    feed: { image, link },
+                    items,
+                } = data || {};
+
+                const posts = items.filter((item) => item.categories.length > 0);
+
+                const tagArrays = posts.map((item) => item.categories);
+
+                const allTags = tagArrays.flat();
+
+                const sortedTagsArray = sortAndSetCategory(allTags) || [];
+
+                // console.log(sortedTagsArray);
+                const tagArticle = [];
+                let removedBlogs = posts;
+                for (let i = 0; i < sortedTagsArray.length; i += 1) {
+                    const blogsWithTag = removedBlogs.filter((blog) =>
+                        blog.categories.includes(sortedTagsArray[i])
+                    ); // filter
+
+                    removedBlogs = removedBlogs.filter(
+                        (blog) => blogsWithTag.indexOf(blog) === -1
+                    ); // exclude
+
+                    if (blogsWithTag.length > 0) {
+                        blogsWithTag.forEach((item) => {
+                            item.tag = sortedTagsArray[i];
+                            tagArticle.push(item);
+                        });
+                    }
+                }
+
+                const filteredTagArrays = tagArticle.map((item) => item.tag);
+                const filteredSortedTagsArray =
+                    sortAndSetCategory(filteredTagArrays) || [];
+
+                tagArticle.forEach((item) => {
+                    item.tagNo = filteredSortedTagsArray.indexOf(item.tag) + 1;
+                    item.avatar = image; // push avatar inside the json
+                    item.profileLink = link; // push profile link inside the JSON
+                });
+
+                const tagArticleWithRow = [];
+
+                console.log('tagArticle', tagArticle);
+
+                tagArticle.forEach((item, i) => {
+                    const row = Math.floor(i / 3);
+                    if (!tagArticleWithRow[row]) tagArticleWithRow[row] = [];
+                    tagArticleWithRow[row].push(item);
+                });
+
+                console.log('tagArticleWithRow', tagArticleWithRow)
+
+                setItemRows(tagArticle);
+                setLoading(true);
+            });
+    }, []);
+
     return (
         <>
             <Navbar />
 
-            <PageBanner pageTitle="Blog Right Sidebar" />
- 
+            <PageBanner pageTitle="Jubilee Financial Blog" />
+
             <div className="blog-area ptb-80">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-8 col-md-12">
+                        <div className="col-lg-12 col-md-12">
                             <div className="row justify-content-center">
-                                <div className="col-lg-6 col-md-6">
-                                    <div className="single-blog-post">
-                                        <div className="blog-image">
-                                            <Link href="/blog-details">
-                                                <a>
-                                                    <img src="/images/blog-image/blog1.jpg" alt="image" />
-                                                </a>
-                                            </Link>
+                                <div class="container-fluid">
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2">
+                                        {
+                                            loading && itemRows.length > 0 &&
+                                            itemRows.map(({
+                                                pubDate,
+                                                thumbnail,
+                                                tagNo,
+                                                tag,
+                                                profileLink,
+                                                avatar,
+                                                author,
+                                                link,
+                                                title,
+                                                content
+                                            }) => (
+                                                <div class="col mb-4">
+                                                    <div class="card h-100">
+                                                        <img src={thumbnail} class="card-img-top" />
+                                                        <div className='single-blog-post'>
+                                                            <div className='blog-image'>
+                                                                <div className="date">
+                                                                    <Calendar /> {pubDate}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div className="blog-post-content">
+                                                                <h3>
+                                                                    <a href={link} target="_blank" rel="noopener noreferrer">{`${ShortenText(ToText(title), 0, 120)}`}</a>
+                                                                </h3>
 
-                                            <div className="date">
-                                                <Icon.Calendar /> March 15, 2021
-                                            </div>
-                                        </div>
+                                                                <span><User /> <a href={profileLink} target="_blank" rel="noopener noreferrer">{author}</a></span>
 
-                                        <div className="blog-post-content">
-                                            <h3>
-                                                <Link href="/blog-details">
-                                                    <a>The Security Risks of Changing Package Owners</a>
-                                                </Link>
-                                            </h3>
+                                                                <p>{`${ShortenText(ToText(content), 0, 120)}...`}</p>
 
-                                            <span>By <a href="#">Admin</a></span>
-
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-
-                                            <Link href="/blog-details">
-                                                <a className="read-more-btn">
-                                                    Read More <Icon.ArrowRight />
-                                                </a>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-6 col-md-6">
-                                    <div className="single-blog-post">
-                                        <div className="blog-image">
-                                            <Link href="/blog-details">
-                                                <a>
-                                                    <img src="/images/blog-image/blog2.jpg" alt="image" />
-                                                </a>
-                                            </Link>
-
-                                            <div className="date">
-                                                <Icon.Calendar /> March 17, 2021
-                                            </div>
-                                        </div>
-
-                                        <div className="blog-post-content">
-                                            <h3>
-                                                <Link href="/blog-details">
-                                                    <a>Tips to Protecting Your Business and Family</a>
-                                                </Link>
-                                            </h3>
-
-                                            <span>By <a href="#">Smith</a></span>
-
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-
-                                            <Link href="/blog-details">
-                                                <a className="read-more-btn">
-                                                    Read More <Icon.ArrowRight />
-                                                </a>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-6 col-md-6">
-                                    <div className="single-blog-post">
-                                        <div className="blog-image">
-                                            <Link href="/blog-details">
-                                                <a>
-                                                    <img src="/images/blog-image/blog3.jpg" alt="image" />
-                                                </a>
-                                            </Link>
-
-                                            <div className="date">
-                                                <Icon.Calendar /> March 19, 2021
-                                            </div>
-                                        </div>
-
-                                        <div className="blog-post-content"> 
-                                            <h3>
-                                                <Link href="/blog-details">
-                                                    <a>Protect Your Workplace from Cyber Attacks</a>
-                                                </Link>
-                                            </h3>
-
-                                            <span>By <a href="#">John</a></span>
-
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-
-                                            <Link href="/blog-details">
-                                                <a className="read-more-btn">
-                                                    Read More <Icon.ArrowRight />
-                                                </a>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div className="col-lg-6 col-md-6">
-                                    <div className="single-blog-post">
-                                        <div className="blog-image">
-                                            <Link href="/blog-details">
-                                                <a>
-                                                    <img src="/images/blog-image/blog4.jpg" alt="image" />
-                                                </a>
-                                            </Link>
-
-                                            <div className="date">
-                                                <Icon.Calendar /> March 15, 2021
-                                            </div>
-                                        </div>
-
-                                        <div className="blog-post-content">
-                                            <h3>
-                                                <Link href="/blog-details">
-                                                    <a>Here are the 5 most telling signs of micromanagement</a>
-                                                </Link>
-                                            </h3>
-
-                                            <span>By <a href="#">Admin</a></span>
-
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-
-                                            <Link href="/blog-details">
-                                                <a className="read-more-btn">
-                                                    Read More <Icon.ArrowRight />
-                                                </a>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-6 col-md-6">
-                                    <div className="single-blog-post">
-                                        <div className="blog-image">
-                                            <Link href="/blog-details">
-                                                <a>
-                                                    <img src="/images/blog-image/blog5.jpg" alt="image" />
-                                                </a>
-                                            </Link>
-
-                                            <div className="date">
-                                                <Icon.Calendar /> March 17, 2021
-                                            </div>
-                                        </div>
-
-                                        <div className="blog-post-content">
-                                            <h3>
-                                                <Link href="/blog-details">
-                                                    <a>I Used The Web For A Day On A 50 MB Budget</a>
-                                                </Link>
-                                            </h3>
-
-                                            <span>By <a href="#">Smith</a></span>
-
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-
-                                            <Link href="/blog-details">
-                                                <a className="read-more-btn">
-                                                    Read More <Icon.ArrowRight />
-                                                </a>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-6 col-md-6">
-                                    <div className="single-blog-post">
-                                        <div className="blog-image">
-                                            <Link href="/blog-details">
-                                                <a>
-                                                    <img src="/images/blog-image/blog6.jpg" alt="image" />
-                                                </a>
-                                            </Link>
-
-                                            <div className="date">
-                                                <Icon.Calendar /> March 19, 2021
-                                            </div>
-                                        </div>
-
-                                        <div className="blog-post-content">
-                                            <h3>
-                                                <Link href="/blog-details">
-                                                    <a>Making Peace With The Feast Or Famine Of Freelancing</a>
-                                                </Link>
-                                            </h3>
-
-                                            <span>By <a href="#">John</a></span>
-
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-
-                                            <Link href="/blog-details">
-                                                <a className="read-more-btn">
-                                                    Read More <Icon.ArrowRight />
-                                                </a>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                {/* Pagination */}
-                                <div className="col-lg-12 col-md-12">
-                                    <div className="pagination-area">
-                                        <nav aria-label="Page navigation">
-                                            <ul className="pagination justify-content-center">
-                                                <li className="page-item"><a className="page-link" href="#">Prev</a></li>
-                                                
-                                                <li className="page-item active"><a className="page-link" href="#">1</a></li>
-                                                
-                                                <li className="page-item"><a className="page-link" href="#">2</a></li>
-                                                
-                                                <li className="page-item"><a className="page-link" href="#">3</a></li>
-                                                
-                                                <li className="page-item"><a className="page-link" href="#">Next</a></li>
-                                            </ul>
-                                        </nav>
+                                                            </div>
+                                                            <a className="read-more-btn" href={link} target="_blank" rel="noopener noreferrer">
+                                                                Read More <ArrowRight />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))
+                                        }
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div className="col-lg-4 col-md-12">
-                            <BlogSidebar />
-                        </div>
+                    </div>
+                    <div className="others-option">
+                        <a className="btn btn-primary" href={MEDIUM_BLOG} target="_blank" rel="noopener noreferrer">Read more stories..</a>
                     </div>
                 </div>
-		    </div>
+            </div>
+
 
             <Footer />
         </>

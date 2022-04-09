@@ -1,8 +1,6 @@
 import React from 'react';
 // import Navbar from "@/components/_App/Navbar";
-import Team from "@/components/Common/Team";
 import FunFactsArea from "@/components/Common/FunFactsArea";
-import Partner from "@/components/Common/Partner";
 import Footer from "@/components/_App/Footer";
 import PageBanner from '@/components/Common/PageBanner';
 import Navbar from "@/components/_App/NavbarStyleFour";

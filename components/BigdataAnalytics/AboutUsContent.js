@@ -7,12 +7,14 @@ const AboutUsContent = () => {
             <div className="container-fluid">
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-12">
-                        <div className="agency-about-img">
+                        <div className="agency-about-img animate__animated animate__fadeInLeft animate__delay-0.5s">
                             <img src="/images/agency-image/agency-about-img.jpg" alt="About us cover image" />
                         </div>
                     </div>
 
-                    <div className="col-lg-6 col-md-12" style={{ paddingTop: '25px', paddingBottom: '25px', paddingLeft: '2rem' }}>
+                    <div
+                        className="col-lg-6 col-md-12 animate__animated animate__fadeInRight animate__delay-0.5s"
+                        style={{ paddingTop: '25px', paddingBottom: '25px', paddingLeft: '2rem' }}>
                         <div className="repair-about-content">
                             <span className="sub-title">WE'VE GOT YOUR BACK</span>
                             <h2>Jubilee is here to help</h2>

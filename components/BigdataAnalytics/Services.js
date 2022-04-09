@@ -18,7 +18,7 @@ const Services = () => {
                 </div>
 
                 <div className="row justify-content-center">
-                    <div className="col-lg-4 col-md-6 col-sm-12">
+                    <div className="col-lg-4 col-md-6 col-sm-12 animate__animated animate__SlideInDown animate__delay-0.7s">
                         <div className="single-services-box-item">
                             <div className="icon">
                                 <img src="/images/bigdata-analytics/icon1.png" alt="image" />
@@ -42,7 +42,7 @@ const Services = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-4 col-md-6 col-sm-12">
+                    <div className="col-lg-4 col-md-6 col-sm-12 animate__animated animate__SlideInDown animate__delay-0.7s">
                         <div className="single-services-box-item">
                             <div className="icon">
                                 <img src="/images/bigdata-analytics/icon2.png" alt="image" />
@@ -66,7 +66,7 @@ const Services = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-4 col-md-6 col-sm-12">
+                    <div className="col-lg-4 col-md-6 col-sm-12 animate__animated animate__SlideInDown animate__delay-0.7s">
                         <div className="single-services-box-item">
                             <div className="icon">
                                 <img src="/images/bigdata-analytics/icon3.png" alt="image" />
@@ -90,7 +90,7 @@ const Services = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-4 col-md-6 col-sm-12">
+                    <div className="col-lg-4 col-md-6 col-sm-12 animate__animated animate__SlideInDown animate__delay-0.7s">
                         <div className="single-services-box-item">
                             <div className="icon">
                                 <img src="/images/bigdata-analytics/icon4.png" alt="image" />
@@ -114,7 +114,7 @@ const Services = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-4 col-md-6 col-sm-12">
+                    <div className="col-lg-4 col-md-6 col-sm-12 animate__animated animate__SlideInDown animate__delay-0.7s">
                         <div className="single-services-box-item">
                             <div className="icon">
                                 <img src="/images/bigdata-analytics/icon5.png" alt="image" />
@@ -138,7 +138,7 @@ const Services = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-4 col-md-6 col-sm-12">
+                    <div className="col-lg-4 col-md-6 col-sm-12 animate__animated animate__SlideInDown animate__delay-0.7s">
                         <div className="single-services-box-item">
                             <div className="icon">
                                 <img src="/images/bigdata-analytics/icon6.png" alt="image" />
