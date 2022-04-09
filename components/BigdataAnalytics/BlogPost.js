@@ -6,8 +6,7 @@ import sortAndSetCategory from "@/utils/SortAndSetCategeory";
 import ShortenText from '@/utils/ShortenText';
 import ToText from '@/utils/ToText';
 
-const MEDIUM_BLOG = 'https://medium.com/@bendaviesromano'
-const MEDIUM_FEED_BLOG = 'https://medium.com/feed/@bendaviesromano'
+const MEDIUM_FEED_BLOG = 'https://medium.com/feed/@ssaurel'
 
 const BlogPost = () => {
     const [itemRows, setItemRows] = useState([]);
@@ -62,10 +61,9 @@ const BlogPost = () => {
                     item.avatar = image; // push avatar inside the json
                     item.profileLink = link; // push profile link inside the JSON
                 });
+                // console.log('tagArticle', tagArticle);
 
                 const tagArticleWithRow = [];
-
-                console.log('tagArticle', tagArticle);
 
                 tagArticle.forEach((item, i) => {
                     const row = Math.floor(i / 3);
@@ -73,7 +71,7 @@ const BlogPost = () => {
                     tagArticleWithRow[row].push(item);
                 });
 
-                console.log('tagArticleWithRow', tagArticleWithRow)
+                // console.log('tagArticleWithRow', tagArticleWithRow);
 
                 setItemRows(tagArticle);
                 setLoading(true);
@@ -92,8 +90,8 @@ const BlogPost = () => {
                 <div className="row">
                     <div className="col-lg-12 col-md-12">
                         <div className="row justify-content-center">
-                            <div class="container-fluid">
-                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                            <div className="container-fluid">
+                                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                                     {
                                         loading && itemRows.length > 0 &&
                                         itemRows.map(({
@@ -108,9 +106,9 @@ const BlogPost = () => {
                                             title,
                                             content
                                         }) => (
-                                            <div class="col mb-4">
-                                                <div class="card h-100">
-                                                    <img src={thumbnail} class="card-img-top" />
+                                            <div className="col mb-4" key={pubDate}>
+                                                <div className="card h-100">
+                                                    <img src={thumbnail} className="card-img-top" />
                                                     <div className='single-blog-post'>
                                                         <div className='blog-image'>
                                                             <div className="date">
@@ -118,7 +116,7 @@ const BlogPost = () => {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="card-body">
+                                                    <div className="card-body">
                                                         <div className="blog-post-content">
                                                             <h3>
                                                                 <a href={link} target="_blank" rel="noopener noreferrer">{`${ShortenText(ToText(title), 0, 120)}`}</a>
