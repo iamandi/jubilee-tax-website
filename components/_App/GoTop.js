@@ -1,7 +1,7 @@
 import React from 'react';
-import * as Icon from 'react-feather';
+import { ArrowUp } from 'react-feather';
 
-const GoTop = ({scrollStepInPx, delayInMs}) => {
+const GoTop = ({ scrollStepInPx, delayInMs }) => {
 
     const [thePosition, setThePosition] = React.useState(false);
     const timeoutRef = React.useRef(null);
@@ -15,9 +15,9 @@ const GoTop = ({scrollStepInPx, delayInMs}) => {
             }
         });
     }, [])
-    
+
     const onScrollStep = () => {
-        if (window.pageYOffset === 0){
+        if (window.pageYOffset === 0) {
             clearInterval(timeoutRef.current);
         }
         window.scroll(0, window.pageYOffset - scrollStepInPx);
@@ -30,7 +30,7 @@ const GoTop = ({scrollStepInPx, delayInMs}) => {
     const renderGoTopIcon = () => {
         return (
             <div className={`go-top ${thePosition ? 'active' : ''}`} onClick={scrollToTop}>
-                <Icon.ArrowUp />
+                <ArrowUp />
             </div>
         )
     }

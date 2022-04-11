@@ -69,7 +69,7 @@ const MainBanner = () => {
                     <div className="container">
                         <div className="row justify-content-center">
                             <Link href="/tax-planning">
-                                <div className="col-lg-2 col-sm-6 single-banner-boxes-conatiner box animate__animated animate__fadeInDown animate__delay-0.5s">
+                                <div className="col-lg-2 col-md-4 col-sm-6 single-banner-boxes-conatiner box">
                                     <div className="single-banner-boxes overlapGrid box-inner">
                                         <Image src={insurance} />
                                         <Image src={insuranceHover} className="upper-image" />
@@ -82,7 +82,7 @@ const MainBanner = () => {
                             </Link>
 
                             <Link href="/insurance-services">
-                                <div className="col-lg-2 col-sm-6 single-banner-boxes-conatiner animate__animated animate__fadeInDown animate__delay-0.5s">
+                                <div className="col-lg-2 col-md-4 col-sm-6 single-banner-boxes-conatiner">
                                     <div className="single-banner-boxes overlapGrid" >
                                         <Image src={mortgage} />
                                         <Image src={mortgageHover} className="upper-image" />
@@ -94,19 +94,31 @@ const MainBanner = () => {
                             </Link>
 
                             <Link href="/living-benefits">
-                                <div className="col-lg-2 col-sm-6 single-banner-boxes-conatiner animate__animated animate__fadeInDown animate__delay-0.5s">
+                                <div className="col-lg-2 col-md-4 col-sm-6 single-banner-boxes-conatiner">
                                     <div className="single-banner-boxes overlapGrid" >
                                         <Image src={financialPlaning} />
                                         <Image src={financialPlaningHover} className="upper-image" />
-                                        <h3>
+                                        <h3 className='one-word'>
                                             Living Benefits
                                         </h3>
                                     </div>
                                 </div>
                             </Link>
 
+                            <Link href="/business-strategies">
+                                <div className="col-lg-2 col-md-4 col-sm-6 single-banner-boxes-conatiner">
+                                    <div className="single-banner-boxes overlapGrid" >
+                                        <Image src={businessStrategies} />
+                                        <Image src={businessStrategiesHover} className="upper-image" priority />
+                                        <h3 className='one-word'>
+                                            Business Strategies
+                                        </h3>
+                                    </div>
+                                </div>
+                            </Link>
+
                             <Link href="/wealth-preservation">
-                                <div className="col-lg-2 col-sm-6 single-banner-boxes-conatiner animate__animated animate__fadeInDown animate__delay-0.5s">
+                                <div className="col-lg-2 col-md-4 col-sm-6 single-banner-boxes-conatiner">
                                     <div className="single-banner-boxes overlapGrid" >
                                         <Image src={creditCards} />
                                         <Image src={creditCardsHover} className="upper-image" />
@@ -118,24 +130,12 @@ const MainBanner = () => {
                             </Link>
 
                             <Link href="/retirement-planning">
-                                <div className="col-lg-2 col-sm-6 single-banner-boxes-conatiner animate__animated animate__fadeInDown animate__delay-0.5s">
+                                <div className="col-lg-2 col-md-4 col-sm-6 single-banner-boxes-conatiner">
                                     <div className="single-banner-boxes overlapGrid" >
                                         <Image src={autoLoans} />
                                         <Image src={autoLoansHover} className="upper-image" />
                                         <h3>
                                             Retirement Planning
-                                        </h3>
-                                    </div>
-                                </div>
-                            </Link>
-
-                            <Link href="/business-strategies">
-                                <div className="col-lg-2 col-sm-6 single-banner-boxes-conatiner animate__animated animate__fadeInDown animate__delay-0.5s">
-                                    <div className="single-banner-boxes overlapGrid" >
-                                        <Image src={businessStrategies} />
-                                        <Image src={businessStrategiesHover} className="upper-image" priority />
-                                        <h3>
-                                            Business Strategies
                                         </h3>
                                     </div>
                                 </div>

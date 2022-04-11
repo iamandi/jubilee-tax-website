@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from "@/components/_App/Navbar";
+import Navbar from "@/components/_App/NavbarStyleFour";
 import Footer from "@/components/_App/Footer";
 import PageBanner from '@/components/Common/PageBanner';
 import Link from 'next/link';
-import * as Icon from 'react-feather';
- 
+import { Facebook, Twitter } from 'react-feather';
+
 const Login = () => {
     return (
         <>
@@ -17,7 +17,7 @@ const Login = () => {
                     <div className="auth-form">
                         <div className="auth-head">
                             <Link href="/it-startup">
-                                <a><img src="/images/logo.png" /></a>
+                                <a><img src="/images/bigdata-analytics/jubilee-logo.jpg" /></a>
                             </Link>
                             <p>Don't have an account yet? <Link href="/sign-up">Sign Up</Link></p>
                         </div>
@@ -44,18 +44,13 @@ const Login = () => {
                             <p>or connect with</p>
                             <ul>
                                 <li>
-                                    <a href="https://www.mail.com/" target="_blank">
-                                        <Icon.Mail />
-                                    </a>
-                                </li>
-                                <li>
                                     <a href="https://www.facebook.com/" target="_blank">
-                                        <Icon.Facebook />
+                                        <Facebook />
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://www.twitter.com/" target="_blank">
-                                        <Icon.Twitter />
+                                        <Twitter />
                                     </a>
                                 </li>
                             </ul>
@@ -63,7 +58,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
- 
+
             <Footer />
         </>
     )

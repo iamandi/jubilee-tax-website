@@ -1,14 +1,15 @@
 import React from 'react';
-import * as Icon from 'react-feather';
+import Link from 'next/link';
+import { Facebook, Linkedin } from 'react-feather';
 
 const ComingSoon = () => {
-	const [days, setDays] = React.useState('');
+    const [days, setDays] = React.useState('');
     const [hours, setHours] = React.useState('');
     const [minutes, setMinutes] = React.useState('');
     const [seconds, setSeconds] = React.useState('');
 
     React.useEffect(() => {
-        const interval = setInterval(() => { 
+        const interval = setInterval(() => {
             commingSoonTime();
         }, 1000);
         return () => clearInterval(interval);
@@ -20,9 +21,9 @@ const ComingSoon = () => {
         let now = new Date();
         let nowParse = (Date.parse(now) / 1000);
         let timeLeft = endTimeParse - nowParse;
-        let days = Math.floor(timeLeft / 86400); 
+        let days = Math.floor(timeLeft / 86400);
         let hours = Math.floor((timeLeft - (days * 86400)) / 3600);
-        let minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+        let minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
         let seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
         if (hours < "10") { hours = "0" + hours; }
         if (minutes < "10") { minutes = "0" + minutes; }
@@ -35,22 +36,22 @@ const ComingSoon = () => {
 
     return (
         <div className="coming-soon-area">
-			<div className="d-table">
-				<div className="d-table-cell">
-					<div className="container">
-						<div className="coming-soon-content">
+            <div className="d-table">
+                <div className="d-table-cell">
+                    <div className="container">
+                        <div className="coming-soon-content">
                             <h1>Under Construction</h1>
                             <p>Our website is currently undergoing scheduled maintenance. We Should be back shortly. Thank you for your patience.</p>
 
-                            <form>
-								<input type="email" className="email-input" placeholder="Enter email address" name="email" required />
-			
-								<button type="submit" className="submit-btn">
-									Notify Me
-								</button>
-							</form>
+                            {/* <form>
+                                <input type="email" className="email-input" placeholder="Enter email address" name="email" required />
 
-							<div id="timer">
+                                <button type="submit" className="submit-btn">
+                                    Notify Me
+                                </button>
+                            </form> */}
+
+                            <div id="timer">
                                 <div id="days">
                                     {days} <span>Days</span>
                                 </div>
@@ -64,35 +65,29 @@ const ComingSoon = () => {
                                     {seconds} <span>Seconds</span>
                                 </div>
                             </div>
-						</div>
-					</div>
-				</div>
-			</div>
+
+                            <Link href="/">
+                                <a className="btn btn-primary" style={{ marginTop: '5%' }}>Go to Homepage</a>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <ul className="social-list">
                 <li className="list-heading">Follow us for update:</li>
                 <li>
-                    <a href="https://facebook.com/" className="facebook" target="_blank">
-                        <Icon.Facebook />
+                    <a href="https://www.facebook.com/JubileeFinancial1/" className="facebook" target="_blank">
+                        <Facebook />
                     </a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/" className="twitter" target="_blank">
-                        <Icon.Twitter />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://linkedin.com/" className="linkedin" target="_blank">
-                        <Icon.Linkedin />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://instagram.com/" className="instagram" target="_blank">
-                        <Icon.Instagram />
+                    <a href="https://www.linkedin.com/company/jubilee-financial-&-business-solutions/" className="linkedin" target="_blank">
+                        <Linkedin />
                     </a>
                 </li>
             </ul>
-		</div>
+        </div>
     )
 }
 

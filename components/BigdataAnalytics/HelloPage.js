@@ -3,17 +3,6 @@ import Link from 'next/link';
 import { Facebook, Linkedin } from 'react-feather';
 
 const HelloPage = () => {
-    // Get demo blocks
-    // const demo = document.querySelectorAll('.cb-demo');
-
-    // // Demo: 1
-    // const demoParticles = document.querySelector('.cb-particles');
-    // const particles = new Particles({
-    //     container: demoParticles,
-    // <div class="cb-particles-item -emoji -v2 -s6" style="transform: translate3d(0px, 158.223px, 0px); will-change: transform;">🎉</div>
-    //     itemsSelector: ".cb-particles-item",
-    // });<div class="cb-particles-item -emoji -v6 -s6" style="transform: translate3d(0px, 1125.48px, 0px); will-change: transform;">💎</div>
-
     return (
         <div className="hello-page-container">
             <div className="" style={{ position: 'relative', padding: '2px', width: '100%' }}>

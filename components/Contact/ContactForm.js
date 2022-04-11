@@ -4,7 +4,6 @@ import axios from 'axios'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 const MySwal = withReactContent(Swal)
-// import baseUrl from '../../utils/baseUrl'
 
 const alertContent = () => {
     MySwal.fire({

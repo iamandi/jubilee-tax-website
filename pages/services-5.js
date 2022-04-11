@@ -3,7 +3,7 @@ import Navbar from "@/components/_App/NavbarStyleFour";
 import Footer from "@/components/_App/Footer";
 import PageBanner from '@/components/Common/PageBanner';
 import Link from 'next/link';
-import * as Icon from 'react-feather';
+import { PlusCircle } from 'react-feather';
 
 const Services5 = () => {
     return (
@@ -28,7 +28,7 @@ const Services5 = () => {
 
                                     <Link href="/tax-planning">
                                         <a className="read-more-btn">
-                                            Read More <Icon.PlusCircle />
+                                            Read More <PlusCircle />
                                         </a>
                                     </Link>
                                 </div>
@@ -48,7 +48,7 @@ const Services5 = () => {
 
                                     <Link href="/insurance-services">
                                         <a className="read-more-btn">
-                                            Read More <Icon.PlusCircle />
+                                            Read More <PlusCircle />
                                         </a>
                                     </Link>
                                 </div>
@@ -68,7 +68,7 @@ const Services5 = () => {
 
                                     <Link href="/living-benefits">
                                         <a className="read-more-btn">
-                                            Read More <Icon.PlusCircle />
+                                            Read More <PlusCircle />
                                         </a>
                                     </Link>
                                 </div>
@@ -87,7 +87,7 @@ const Services5 = () => {
 
                                     <Link href="/401k-ira-rollover">
                                         <a className="read-more-btn">
-                                            Read More <Icon.PlusCircle />
+                                            Read More <PlusCircle />
                                         </a>
                                     </Link>
                                 </div>
@@ -107,7 +107,7 @@ const Services5 = () => {
 
                                     <Link href="/wealth-preservation">
                                         <a className="read-more-btn">
-                                            Read More <Icon.PlusCircle />
+                                            Read More <PlusCircle />
                                         </a>
                                     </Link>
                                 </div>
@@ -127,7 +127,7 @@ const Services5 = () => {
 
                                     <Link href="/retirement-planning">
                                         <a className="read-more-btn">
-                                            Read More <Icon.PlusCircle />
+                                            Read More <PlusCircle />
                                         </a>
                                     </Link>
                                 </div>
@@ -147,7 +147,7 @@ const Services5 = () => {
 
                                     <Link href="/business-strategies">
                                         <a className="read-more-btn">
-                                            Read More <Icon.PlusCircle />
+                                            Read More <PlusCircle />
                                         </a>
                                     </Link>
                                 </div>

@@ -276,21 +276,6 @@
   .single-works:hover .icon {
     top: 10px;
   }
-  .pricing-area {
-    padding-bottom: 20px;
-  }
-  .pricing-table {
-    padding-bottom: 30px;
-  }
-  .pricing-table .pricing-header h3 {
-    font-size: 17px;
-  }
-  .pricing-table .price {
-    margin-bottom: 25px;
-  }
-  .pricing-table .price span {
-    font-size: 27px;
-  }
   .single-pricing-table {
     padding: 25px 20px;
     margin-bottom: 30px;
@@ -2327,29 +2312,53 @@
     height: 77px;
   }
   .navbar-color-white .startp-nav nav .navbar-nav .nav-item a {
-    text-shadow: 0px 0px #ffffff;
+    text-shadow: none;
   }
   .bigdata-analytics-banner {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.2))), url(/images/bigdata-analytics/mobile-bg.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(/images/bigdata-analytics/mobile-bg.jpg);
     background-repeat: repeat;
-    padding-top: 230px;
+    padding-top: 120px;
+    padding-bottom: 20px;
   }
   .bigdata-analytics-banner .hide-cover {
-    display: none;
+    opacity: 0;
   }
   .bigdata-analytics-content {
-    max-width: 530px;
+    text-align: center;
+    max-width: 100%;
   }
   .bigdata-analytics-content h1 {
     font-size: 40px;
     color: white;
   }
   .bigdata-analytics-content p {
+    max-width: 100%;
     color: #e9e9e9;
   }
   .banner-boxes-area {
     margin-top: 50px;
+  }
+  .single-banner-boxes {
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 20px;
+  }
+  .single-banner-boxes h3 {
+    margin-bottom: 0;
+    font-size: 17px;
+  }
+  .single-banner-boxes .icon {
+    width: 50px;
+    height: 50px;
+    left: 15px;
+    top: 20px;
+    line-height: 50px;
+  }
+  .single-banner-boxes br {
+    display: none;
+  }
+  .single-banner-boxes .one-word {
+    word-spacing: 9999rem;
   }
   .discover-image {
     margin-right: 0;
@@ -2710,6 +2719,9 @@
   .single-banner-boxes {
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .one-word {
+    word-spacing: 9999rem;
   }
 }
 /*# sourceMappingURL=responsive.css.map */

@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from '@/utils/ActiveLink';
 import { ChevronDown } from 'react-feather';
+
+const LOGIN_URL = "https://totaledgemarketing.insuredmine.com/agent/session/loginone";
 
 const NavbarStyleFour = () => {
     const [menu, setMenu] = React.useState(true)
@@ -152,7 +154,7 @@ const NavbarStyleFour = () => {
                                     <a
                                         onClick={toggleNavbar}
                                         className="nav-link"
-                                        href="https://totaledgemarketing.insuredmine.com/agent/session/loginone"
+                                        href={LOGIN_URL}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         activeClassName="active"

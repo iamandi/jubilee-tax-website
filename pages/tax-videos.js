@@ -1,15 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
 import Navbar from "@/components/_App/NavbarStyleFour";
 import Footer from "@/components/_App/Footer";
 import PageBanner from '@/components/Common/PageBanner';
-import {
-    Accordion,
-    AccordionItem,
-    AccordionItemHeading,
-    AccordionItemPanel,
-    AccordionItemButton
-} from 'react-accessible-accordion';
 
 const FAQ = () => {
     return (

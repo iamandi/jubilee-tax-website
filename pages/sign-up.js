@@ -1,9 +1,9 @@
 import React from 'react';
-import Navbar from "@/components/_App/Navbar";
+import Navbar from "@/components/_App/NavbarStyleFour";
 import Footer from "@/components/_App/Footer";
 import PageBanner from '@/components/Common/PageBanner';
 import Link from 'next/link';
- 
+
 const SignUp = () => {
     return (
         <>
@@ -16,7 +16,7 @@ const SignUp = () => {
                     <div className="auth-form">
                         <div className="auth-head">
                             <Link href="/it-startup">
-                                <a><img src="/images/logo.png" /></a>
+                                <a><img src="/images/bigdata-analytics/jubilee-logo.jpg" /></a>
                             </Link>
                             <p>Create a new account</p>
                         </div>
@@ -46,7 +46,7 @@ const SignUp = () => {
                     </div>
                 </div>
             </div>
- 
+
             <Footer />
         </>
     )

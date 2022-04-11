@@ -3768,14 +3768,7 @@ Big Data Analytics Banner CSS
 ===============================*/
 .bigdata-analytics-banner {
 	position: relative; // to constrain next/image inside the parent div
-	// background: {
-	// 	// image: url(/images/bigdata-analytics/main-banner.jpg);
-	// 	// image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),url(/images/bigdata-analytics/bg-new.png); // dark
-	// 	// image: linear-gradient(0.25turn, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)),url(/images/bigdata-analytics/test-img.jpg);
-	// 	position: center center;
-	// 	size: cover;
-	// 	repeat: no-repeat;	
-	// }
+
 	padding: {
 		top: 280px;
 		bottom: 25px;
@@ -3832,10 +3825,6 @@ Big Data Analytics Banner CSS
 		display: none;
 	}
 
-	// .display-br2 {
-	// 	display: none;
-	// }
-
 	&::before {
 		content: '';
 		position: absolute;
@@ -3878,8 +3867,6 @@ Big Data Analytics Banner CSS
 		transition: $transition;
 	}
 	&:hover {
-		// background-color: transparent;
-		// border-color: transparent;
 		border: 2px solid #687b6f;
 
 		.icon {
@@ -7223,7 +7210,7 @@ Coming Soon CSS
 	z-index: 1;
 	height: 100vh;
 	background: {
-		image: url(/images/coming-soon.jpg);
+		// image: url(/images/coming-soon.jpg);
 		position: center center;
 		size: cover;
 		repeat: no-repeat;
@@ -10687,62 +10674,42 @@ Go Top CSS
 }
 .snowflake:nth-of-type(1) {
 	left: 2%;
-	// -webkit-animation-delay: 2s, 8s;
-	// animation-delay: 2s, 8s;
 	animation-duration: 8s;
 }
 .snowflake:nth-of-type(2) {
 	left: 19%;
-	// -webkit-animation-delay: 6s, 0.5s;
-	// animation-delay: 6s, 0.5s
 	animation-duration: 4s;
 }
 .snowflake:nth-of-type(3) {
 	left: 80%;
-	// -webkit-animation-delay: 4s, 2s;
-	// animation-delay: 4s, 2s;
 	animation-duration: 6.3s;
 }
 .snowflake:nth-of-type(4) {
 	left: 75%;
-	// -webkit-animation-delay: 2s, 1.2s;
-	// animation-delay: 2s, 1.2s
 	animation-duration: 11s;
 }
 .snowflake:nth-of-type(5) {
 	left: 20%;
-	// -webkit-animation-delay: 8s, 3s;
-	// animation-delay: 8s, 3s;
 	animation-duration: 13s;
 }
 .snowflake:nth-of-type(6) {
 	left: 90%;
-	// -webkit-animation-delay: 6s, 2s;
-	// animation-delay: 6s, 2s;
 	animation-duration: 6.5s;
 }
 .snowflake:nth-of-type(7) {
 	left: 40%;
-	// -webkit-animation-delay: 13s, 1s;
-	// animation-delay: 13s, 1s;
 	animation-duration: 6s;
 }
 .snowflake:nth-of-type(8) {
 	left: 52%;
-	// -webkit-animation-delay: 1s, 0.3s;
-	// animation-delay: 1s, 0.3s
 	animation-duration: 5.5s;
 }
 .snowflake:nth-of-type(9) {
 	left: 57%;
-	// -webkit-animation-delay: 9s, 0.2s;
-	// animation-delay: 9s, 0.2s
 	animation-duration: 11s;
 }
 .snowflake:nth-of-type(10) {
 	left: 32%;
-	// -webkit-animation-delay: 4s, 4s;
-	// animation-delay: 4s, 4s;
 	animation-duration: 7.3s;
 }
 
@@ -10758,10 +10725,6 @@ Go Top CSS
 	left: 11%;
 	animation-duration: 11.3s;
 }
-// .snowflake:nth-of-type(7) {
-// 	left: 70%;
-// 	-webkit-animation-delay: 'https://proxy.everskies.com/a/https://proxy.everskies.com/a/2.5s,1s;animation-delay:https://proxy.everskies.com/a/https://proxy.everskies.com/a/2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,https://proxy.everskies.com/a/https://proxy.everskies.com/a/1.5s;animation-delay:3s,https://proxy.everskies.com/a/https://proxy.everskies.com/a/1.5s';
-// }
 
 // @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
 .otro-blockquote {
