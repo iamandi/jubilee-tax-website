@@ -776,10 +776,10 @@ Navbar CSS
 			.navbar-nav {
 				.nav-item {
 					a {
-						// color: $white-color;
-						color: $default-color;
+						color: $white-color;
+						// color: $default-color;
 
-						text-shadow: 2px 2px #ffffff;
+						// text-shadow: 2px 2px #ffffff;
 						font-size: 1.2rem;
 
 						&:hover,
@@ -3769,18 +3769,59 @@ Ready To Talk CSS
 Big Data Analytics Banner CSS
 ===============================*/
 .bigdata-analytics-banner {
-	position: relative; // to constrain next/image inside the parent div
+	// position: relative; // to constrain next/image inside the parent div
 
 	padding: {
-		top: 280px;
-		bottom: 25px;
+		top: 110px;
+		// bottom: 25px;
 	}
 }
 
-.bigdata-analytics-content {
-	max-width: 555px;
 
-	h1 {
+.bigdata-analytics-content {
+	// max-width: 1555px;
+	max-height: 100vh;
+	
+	.legend-override {
+		position: absolute;
+		bottom: 50%;
+		left: 50%;
+		margin-left: -45%;
+		width: 90%;
+		border-radius: 10px px;
+		background: transparent;
+		padding: 10px;
+		font-size: 12px;
+		text-align: center;
+		opacity: 1;
+		transition: opacity 0.35s ease-in-out;
+	
+		h1 {
+			color: #fff;
+			font-size: 85px;
+			font-weight: 700;
+		}
+
+		h6 {
+			color: #fff;
+			font-size: 1.2rem;
+		}
+
+		.legend-override-btn {
+			margin-top: 2rem;
+			font-size: 1.2rem !important;
+			color: #fff;
+			background-color: #1d5089 !important;
+			box-shadow: 0 -3px 0 0 rgba(24, 24, 24, 0.15) inset;
+		
+			&:hover {
+				box-shadow: 0 -3px 0 0 rgba(24, 24, 24, 0.15) inset,
+				0 3px 10px rgba(24, 24, 24, 0.30);
+			}
+		}
+	}
+
+	h2 {
 		color: #1f1b50;
 		position: relative;
 		z-index: 2;
@@ -10886,4 +10927,97 @@ Go Top CSS
 			}
 		}	
 	}
+}
+
+// Embla classes
+.embla {
+	position: relative;
+	background-color: #f7f7f7;
+	padding: 20px;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.embla__viewport {
+	overflow: hidden;
+	width: 100%;
+}
+
+.embla__viewport.is-draggable {
+	cursor: move;
+	cursor: grab;
+}
+
+.embla__viewport.is-dragging {
+	cursor: grabbing;
+}
+
+.embla__container {
+	display: flex;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	margin-left: -10px;
+}
+
+.embla__slide {
+	position: relative;
+	min-width: 100%;
+	padding-left: 10px;
+}
+
+.embla__slide__inner {
+	position: relative;
+	overflow: hidden;
+	height: 190px;
+}
+
+.embla__slide__img {
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	width: auto;
+	min-height: 100%;
+	min-width: 100%;
+	max-width: none;
+	transform: translate(-50%, -50%);
+}
+
+.embla__button {
+	outline: 0;
+	cursor: pointer;
+	background-color: transparent;
+	touch-action: manipulation;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	transform: translateY(-50%);
+	border: 0;
+	width: 30px;
+	height: 30px;
+	justify-content: center;
+	align-items: center;
+	fill: #1bcacd;
+	padding: 0;
+}
+
+.embla__button:disabled {
+	cursor: default;
+	opacity: 0.3;
+}
+
+.embla__button__svg {
+	width: 100%;
+	height: 100%;
+}
+
+.embla__button--prev {
+	left: 27px;
+}
+
+.embla__button--next {
+	right: 27px;
 }

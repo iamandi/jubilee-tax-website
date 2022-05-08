@@ -1880,6 +1880,8 @@ $default-color: #1f1b50;
 	}
 
 	.bigdata-analytics-banner {
+		display: none;
+
 		background: {
 			image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(/images/bigdata-analytics/mobile-bg.jpg);
 			repeat: repeat;
@@ -1895,7 +1897,7 @@ $default-color: #1f1b50;
 	.bigdata-analytics-content {
 		text-align: center;
 		max-width: 100%;
-
+		
 		h1 {
 			font-size: 27px;
 			margin-bottom: 20px;
@@ -3049,6 +3051,8 @@ $default-color: #1f1b50;
 	}
 	
 	.bigdata-analytics-banner {
+		display: none;
+		
 		background: {
 			image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(/images/bigdata-analytics/mobile-bg.jpg);
 			repeat: repeat;

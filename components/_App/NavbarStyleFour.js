@@ -27,7 +27,7 @@ const NavbarStyleFour = () => {
     const classTwo = menu ? 'navbar-toggler navbar-toggler-right collapsed' : 'navbar-toggler navbar-toggler-right';
 
     return (
-        <header id="header" className="headroom navbar-color-white navbar-style-four">
+        <header id="header" className="headroom navbar-color-white navbar-style-four" style={{ backgroundColor: '#2D4474' }}>
             <div className="startp-nav">
                 <div className="container">
                     <nav className="navbar navbar-expand-md navbar-light">
