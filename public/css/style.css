@@ -126,7 +126,7 @@ a:hover, a:focus {
 }
 
 p {
-  color: #1f1b50;
+  color: #355088;
   line-height: 1.8;
   font-size: 1.1rem;
 }
@@ -307,7 +307,6 @@ textarea.form-control {
   width: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background: #c679e3;
   z-index: -1;
 }
 
@@ -619,7 +618,7 @@ Navbar CSS
 .startp-nav nav .navbar-nav .nav-item a {
   font-weight: 500;
   font-size: 15px;
-  color: #1f1b50;
+  color: #355088;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
@@ -824,7 +823,7 @@ Navbar CSS
 }
 
 .navbar-color-white#header.headroom.is-sticky li .nav-item .nav-link {
-  color: #1f1b50;
+  color: #355088;
 }
 
 .navbar-color-white#header.headroom.is-sticky .navbar-nav .nav-item a:hover, .navbar-color-white#header.headroom.is-sticky .navbar-nav .nav-item a.active {
@@ -4355,8 +4354,8 @@ Discover CSS
   -webkit-box-shadow: unset !important;
           box-shadow: unset !important;
   margin-top: 15px;
-  background-color: #ffffff;
-  color: #0e314c;
+  background-color: #355088;
+  color: #ffffff;
 }
 
 .discover-content .btn-primary:hover {

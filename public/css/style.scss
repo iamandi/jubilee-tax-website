@@ -99,7 +99,8 @@ $font-family: 'Poppins', sans-serif;
 $light-green-color: #44ce6f;
 $white-color: #ffffff;
 $black-color: #0e314c;
-$default-color: #1f1b50;
+$default-color: #355088;
+$default-color-old: #1f1b50;
 $navlink-color: #4a6f8a;
 $paragraph-color: #6084a4;
 $purple-color: #c679e3;
@@ -325,7 +326,7 @@ textarea.form-control {
 		height: 100%;
 		width: 0;
 		transition: $transition;
-		background: $purple-color;
+		// background: $purple-color;
 		z-index: -1;
 	}
 	&::after {
@@ -4195,8 +4196,8 @@ Discover CSS
 	.btn-primary {
 		box-shadow: unset !important;
 		margin-top: 15px;
-		background-color: $white-color;
-		color: $black-color;
+		background-color: $default-color;
+		color: $white-color;
 
 		&:hover {
 			color: $white-color;

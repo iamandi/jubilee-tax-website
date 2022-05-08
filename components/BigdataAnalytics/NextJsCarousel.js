@@ -9,7 +9,7 @@ import retirementPlanning from '../../public/images/bigdata-analytics/carousel-i
 export default function NextJsCarousel(props) {
   return (
     <Carousel
-      autoPlay
+      autoPlay={false}
       infiniteLoop
       emulateTouch
       stopOnHover
@@ -50,7 +50,7 @@ export default function NextJsCarousel(props) {
         <div className="legend-override">
           <h1>Tax Planning</h1>
           <h6>Maximize your return</h6>
-          <button className='btn legend-override-btn'>Learn More</button>
+          <button className='btn btn-primary legend-override-btn'>Learn More</button>
         </div>
       </div>
       <div className='bigdata-analytics-content'>
@@ -58,7 +58,7 @@ export default function NextJsCarousel(props) {
         <div className="legend-override">
           <h1>Insurance Services</h1>
           <h6>Did you know that insurance services can be your best financial partner</h6>
-          <button className='btn legend-override-btn'>Know More</button>
+          <button className='btn btn-primary legend-override-btn'>Know More</button>
         </div>
       </div>
       {/* <div className='bigdata-analytics-content'>
@@ -70,7 +70,7 @@ export default function NextJsCarousel(props) {
         <div className="legend-override">
           <h1>Retirement Planning</h1>
           <h6>It's about preserving your legacy</h6>
-          <button className='btn legend-override-btn'>Know More</button>
+          <button className='btn btn-primary legend-override-btn'>Know More</button>
         </div>
       </div>
     </Carousel>
