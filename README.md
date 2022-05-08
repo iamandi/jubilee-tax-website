@@ -8,4 +8,6 @@ Doneness:
 -   [x] Preview of medium blogs under "Our recent story" section
 -   [ ] Youtube channel and video uploads
 -   [ ] Youtube video playlist display on Tax Videos page
--   [ ] Add scrolling and other animations
+-   [x] Add scrolling and other animations
+-   [ ] Add calendly account and link to the site
+-   [ ] Picture carousel instead of piggy bank girl pic

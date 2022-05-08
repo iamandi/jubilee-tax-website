@@ -33,7 +33,7 @@ const About1 = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-md-12">
                             <div className="about-image">
-                                <img src="/images/bigdata-analytics/dinese-headshot-half-transparent.png" alt="image" />
+                                <img src="/images/dinese_headshot.jpg" alt="image" />
                             </div>
                         </div>
 
@@ -50,12 +50,9 @@ const About1 = () => {
                                     A Certified Tax Professional that serves local, national and international clients, Dinese Gamble launched Gamble Tax & Notary in 1998, advising individuals, small businesses, partnerships and local corporations on their taxes and financial goals. She celebrated her 22nd year in business in 2020.
                                 </p>
                                 <p>
-                                    In 2013, Dinese expanded her operations and renamed the business Jubilee Financial, providing a full suite of financial services including tax preparation, full accounting/payroll services, financial education and planning (i.e. retirement, college, asset acquisition and coaching businesses on tax and financial strategy.
+                                    In 2013, Dinese expanded her operations and renamed the business Jubilee Financial, providing a full suite of financial services including tax preparation, full accounting/payroll services, financial education and planning i.e. retirement, college, asset acquisition and coaching businesses on tax and financial strategy.
                                 </p>
                             </div>
-                        </div>
-
-                        <div className="about-content" style={{ paddingTop: '1.3rem' }}>
                             <p>
                                 Dinese holds a Masters of Public Health from the University of California, Berkeley, a B.S. in Biology from Cal State East Bay, and certifications and licenses in the areas of tax, accounting, insurance/annuities. A Bay Area native, Dinese resides in Oakland with her young adult twin daughters.
                             </p>

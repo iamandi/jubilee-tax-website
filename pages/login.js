@@ -4,6 +4,15 @@ import Footer from "@/components/_App/Footer";
 import PageBanner from '@/components/Common/PageBanner';
 import Link from 'next/link';
 import { Facebook, Twitter } from 'react-feather';
+// import GoogleProvider from "next-auth/providers/google";
+// providers: [
+//     GoogleProvider({
+//         clientId: process.env.GOOGLE_CLIENT_ID,
+//         clientSecret: process.env.GOOGLE_CLIENT_SECRET
+//     })
+// ]
+
+const LOGIN_URL = "https://totaledgemarketing.insuredmine.com/agent/session/loginone";
 
 const Login = () => {
     return (
@@ -12,12 +21,14 @@ const Login = () => {
 
             <PageBanner pageTitle="Login" />
 
-            <div className="ptb-80">
+            <div className="pb-80">
                 <div className="container">
                     <div className="auth-form">
                         <div className="auth-head">
-                            <Link href="/it-startup">
-                                <a><img src="/images/bigdata-analytics/jubilee-logo.jpg" /></a>
+                            <Link href="/">
+                                <a style={{ backgroundColor: 'lightslategray' }}>
+                                    <img style={{ width: '50%' }} src="/images/bigdata-analytics/jubilee-logo.jpg" alt="Jubilee logo" />
+                                </a>
                             </Link>
                             <p>Don't have an account yet? <Link href="/sign-up">Sign Up</Link></p>
                         </div>
@@ -40,7 +51,7 @@ const Login = () => {
                             <button type="submit" className="btn btn-primary">Login</button>
                         </form>
 
-                        <div className="foot">
+                        {/* <div className="foot">
                             <p>or connect with</p>
                             <ul>
                                 <li>
@@ -54,6 +65,20 @@ const Login = () => {
                                     </a>
                                 </li>
                             </ul>
+                        </div> */}
+
+                        <div className="mb-3" style={{ marginTop: "10%" }}>
+                            <p>Looking for admin site?
+                                <a
+                                    className="nav-link"
+                                    href={LOGIN_URL}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    activeClassName="active"
+                                >
+                                    Click Here
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>

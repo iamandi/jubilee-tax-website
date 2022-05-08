@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import ReCAPTCHA from 'react-google-recaptcha'
 const MySwal = withReactContent(Swal)
 
 const alertContent = () => {
@@ -27,6 +28,9 @@ const INITIAL_STATE = {
 
 const ContactForm = () => {
     const [contact, setContact] = useState(INITIAL_STATE);
+
+    const recaptchaRef = React.createRef();
+
     const { register, handleSubmit, reset, errors } = useForm();
     const handleChange = e => {
         const { name, value } = e.target;
@@ -34,8 +38,26 @@ const ContactForm = () => {
         // console.log(contact);
     }
 
+    const onReCAPTCHAChange = (captchaCode) => {
+        // If the reCAPTCHA code is null or undefined indicating that
+        // the reCAPTCHA was expired then return early
+        if (!captchaCode) {
+            return;
+        }
+        // Else reCAPTCHA was executed successfully so proceed with the 
+        // alert
+        alert(`Hey, ${email}`);
+        // Reset the reCAPTCHA so that it can be executed again if user 
+        // submits another email.
+        recaptchaRef.current.reset();
+    }
+
     const onSubmit = async e => {
         // e.preventDefault();
+        // Execute the reCAPTCHA when the form is submitted
+        console.log('recaptchaRef', recaptchaRef);
+        // recaptchaRef.current.execute();
+
         try {
             const url = `/api/contact`;
 
@@ -68,6 +90,12 @@ const ContactForm = () => {
 
                     <div className="col-lg-6 col-md-12">
                         <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
+                            <ReCAPTCHA
+                                ref={recaptchaRef}
+                                size="invisible"
+                                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                                onChange={onReCAPTCHAChange}
+                            />
                             <div className="row">
                                 <div className="col-lg-12 col-md-12">
                                     <div className="form-group">
@@ -152,6 +180,12 @@ const ContactForm = () => {
                                         <div className='invalid-feedback' style={{ display: 'block' }}>
                                             {errors.text && 'Message is required.'}
                                         </div>
+                                    </div>
+
+                                    <div className="form-check">
+                                        <label className="form-check-label" htmlFor="flexCheckDefault">
+                                            Protected by Google reCaptcha anti-spam policy.
+                                        </label>
                                     </div>
 
                                     <div className="form-check">

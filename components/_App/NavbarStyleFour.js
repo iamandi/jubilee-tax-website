@@ -3,6 +3,7 @@ import Link from '@/utils/ActiveLink';
 import { ChevronDown } from 'react-feather';
 
 const LOGIN_URL = "https://totaledgemarketing.insuredmine.com/agent/session/loginone";
+const CALENDLY_LOGIN = "https://calendly.com/dinesejubilee"
 
 const NavbarStyleFour = () => {
     const [menu, setMenu] = React.useState(true)
@@ -163,12 +164,33 @@ const NavbarStyleFour = () => {
                                     </a>
                                 </li>
 
+                                {/* <li className="nav-item">
+                                    <Link href="/login" activeClassName="active">
+                                        <a
+                                            onClick={toggleNavbar}
+                                            className="nav-link"
+                                        >
+                                            Login
+                                        </a>
+                                    </Link>
+                                </li> */}
+
                             </ul>
                         </div>
 
                         <div className="others-option">
                             <Link href="/contact">
-                                <a className="btn btn-primary">Talk to Us</a>
+                                {/* <a className="btn btn-primary">Talk to Us</a> */}
+                                <a
+                                    onClick={toggleNavbar}
+                                    className="btn btn-primary"
+                                    href={CALENDLY_LOGIN}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    activeClassName="active"
+                                >
+                                    Schedule Call
+                                </a>
                             </Link>
                         </div>
                     </nav>

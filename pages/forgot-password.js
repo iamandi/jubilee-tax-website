@@ -4,23 +4,23 @@ import Footer from "@/components/_App/Footer";
 import PageBanner from '@/components/Common/PageBanner';
 import Link from 'next/link';
 
-const SignUp = () => {
+const ForgotPassword = () => {
     return (
         <>
             <Navbar />
 
-            <PageBanner pageTitle="Sign Up" />
+            <PageBanner pageTitle="Forgot Password" />
 
             <div className="pb-80">
                 <div className="container">
                     <div className="auth-form">
                         <div className="auth-head">
-                            <Link href="/it-startup">
+                            <Link href="/">
                                 <a style={{ backgroundColor: 'lightslategray' }}>
                                     <img style={{ width: '50%' }} src="/images/bigdata-analytics/jubilee-logo.jpg" alt="Jubilee logo" />
                                 </a>
                             </Link>
-                            <p>Create a new account</p>
+                            <p>If you have lost password or wisht to reset it, enter your email below and we will send instructions to reset your password.</p>
                         </div>
 
                         <form>
@@ -29,22 +29,8 @@ const SignUp = () => {
                                 <input type="email" className="form-control" id="exampleInputEmail1" />
                             </div>
 
-                            <div className="mb-3">
-                                <label className="form-label">Password</label>
-                                <input type="password" className="form-control" id="exampleInputPassword1" />
-                            </div>
-
-                            <div className="mb-3">
-                                <label className="form-label">Confirm Password</label>
-                                <input type="password" className="form-control" id="ConfirmPassword" />
-                            </div>
-
-                            <button type="submit" className="btn btn-primary">Sign Up</button>
+                            <button type="submit" className="btn btn-primary">Reset Password</button>
                         </form>
-
-                        <div className="foot">
-                            <p>Already have an account yet? <Link href="/login">Login</Link></p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -54,4 +40,4 @@ const SignUp = () => {
     )
 }
 
-export default SignUp;
+export default ForgotPassword;
