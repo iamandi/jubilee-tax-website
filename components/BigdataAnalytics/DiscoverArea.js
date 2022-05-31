@@ -1,33 +1,30 @@
 import React from 'react';
-import Link from 'next/link';
+import { MapPin } from 'react-feather';
 
 const DiscoverArea = () => {
     return (
-        <div className="discover-area ptb-80">
+        <div className="discover-area ptb-40">
             <div className="container">
                 <div className="row align-items-center">
-                    <div className="col-lg-6 col-md-12">
-                        <div className="discover-image">
-                            <img src="/images/bigdata-analytics/discover-img1.png" alt="image" />
-                            <img src="/images/bigdata-analytics/discover-img2.jpg" alt="image" />
+                    <div className="col-lg-7 col-md-12">
+                        <div className="discover-content">
+                            <h5>GRAND OPENING</h5>
+                            <h1>Visit Us At Our New Location!</h1>
                         </div>
                     </div>
 
-                    <div className="col-lg-6 col-md-12">
-                        <div className="discover-content">
-                            <h2>Who We Are</h2>
-                            <p>Jubilee Tax & Financial Solutions Inc. provides a holistic and comprehensive package of practical tools and assistance to better support you in achieving your professional & personal financial goals. We specialize in tax preparation and strategy, and provide a variety of service offerings gearing our clients towards a life of financial freedom via two major sectors, Tax Related Services and Wealth Management and Retirement.</p>
-
-                            <Link href="/about-1">
-                                <a className="btn btn-primary">More About Us</a>
-                            </Link>
+                    <div className="col-lg-5 col-md-12">
+                        <div className="secondary-content">
+                            <div className="icon-holder">
+                                <MapPin />
+                            </div>
+                            <div className="icon-text-holder">
+                                <h5 style={{ fontWeight: '700' }}>Address</h5>
+                                <p style={{ color: 'black' }}>330 Franklin Street, Oakland, CA 94607</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div className="analytics-shape1">
-                <img src="/images/bigdata-analytics/analytics-shape1.png" alt="image" />
             </div>
         </div>
     )

@@ -8,7 +8,7 @@ const FAQ = () => {
         <>
             <Navbar />
 
-            <PageBanner pageTitle="Jubilee Financial Tax Videos" />
+            <PageBanner pageTitle1="Jubilee Financial" pageTitle2="Tax Videos" pageSubTitle='STAY INFORMED' />
 
             <div className="faq-area ptb-80">
                 <div className="container">

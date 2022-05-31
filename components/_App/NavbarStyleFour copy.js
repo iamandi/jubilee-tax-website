@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from '@/utils/ActiveLink';
-import { ChevronDown } from 'react-feather';
-import NavbarBanner from './NavbarBanner';
+import { ChevronDown, Facebook, Linkedin } from 'react-feather';
 
 const LOGIN_URL =
     'https://totaledgemarketing.insuredmine.com/agent/session/loginone';
@@ -39,7 +38,84 @@ const NavbarStyleFour = () => {
                 className='headroom navbar-color-white navbar-style-four'
                 style={{ backgroundColor: '#1d5089' }}
             >
-                <NavbarBanner />
+                <div className='container'>
+                    <div
+                        style={{
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            color: 'white',
+                            fontSize: '0.87rem',
+                        }}
+                    >
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'flex-start',
+                            fontSize: '0.87rem',
+                            lineHeight: 2.5,
+                        }}>
+                            <div class='btIconWidget  btAccentIconWidget btWidgetWithText'>
+                                <div class='btIconWidgetIcon'>
+                                    <span
+                                        data-ico-fontawesome=''
+                                        class='bt_bb_icon_holder'
+                                    ></span>
+                                </div>
+                                <div class='btIconWidgetContent'>
+                                    <span class='btIconWidgetTitle' style={{ marginRight: '0.5rem' }}>
+                                        Monday - Friday
+                                    </span>
+                                    <span class='btIconWidgetText' style={{ opacity: 0.5 }}>8AM - 5PM</span>
+                                </div>
+                            </div>
+                            <div class='btIconWidget  btWidgetWithText' style={{ marginLeft: '1.5rem' }}>
+                                <div class='btIconWidgetContent'>
+                                    <span class='btIconWidgetTitle' style={{ marginRight: '0.5rem' }}>
+                                        Saturday - Sunday
+                                    </span>
+                                    <span class='btIconWidgetText' style={{ opacity: 0.5 }}>
+                                        By Appointment Only
+                                    </span>
+                                </div>
+                            </div>
+                            <div class='btIconWidget  btAccentIconWidget btWidgetWithText'>
+                                <div class='btIconWidgetIcon'>
+                                    <span
+                                        data-ico-fontawesome=''
+                                        class='bt_bb_icon_holder'
+                                    ></span>
+                                </div>
+                                <div class='btIconWidgetContent' style={{ marginLeft: '1.5rem' }}>
+                                    <span class='btIconWidgetTitle' style={{ marginRight: '0.5rem' }}>Office</span>
+                                    <span class='btIconWidgetText' style={{ opacity: 0.5 }}>
+                                        330 Franklin Street, Oakland, CA 94607
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='topTools btTopToolsRight' style={{
+                            display: 'flex',
+                            justifyContent: 'flex-start',
+                            color: 'white',
+                            fontSize: '0.87rem',
+                            lineHeight: 2.5,
+                        }}>
+                            <div class='btIconWidget  btWidgetWithText'>
+                                <div class='btIconWidgetContent'>
+                                    <span class='btIconWidgetTitle'>
+                                        Visit our social pages
+                                    </span>
+                                </div>
+                            </div>
+                            <a style={{ marginLeft: '1rem', color: 'white' }} className="facebook" href="https://www.facebook.com/JubileeFinancial1/" target="_blank" rel="noopener noreferrer" >
+                                <Facebook size="0.87rem" />
+                            </a>
+                            <a style={{ marginLeft: '1rem', color: 'white' }} className="linkedin" href="https://www.linkedin.com/company/jubilee-financial-&-business-solutions/" target="_blank" rel="noopener noreferrer" >
+                                <Linkedin size="0.87rem" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
                 <div className='startp-nav'>
                     <div className='container'>
@@ -85,8 +161,9 @@ const NavbarStyleFour = () => {
                                     </li>
 
                                     <li className='nav-item'>
-                                        <Link href='/services-2' activeClassName='active'>
+                                        <Link href='/#' activeClassName='active'>
                                             <a
+                                                onClick={(e) => e.preventDefault()}
                                                 className='nav-link'
                                             >
                                                 Services <ChevronDown />
@@ -219,7 +296,7 @@ const NavbarStyleFour = () => {
                                                 </Link>
                                             </li>
 
-                                            {/* <li className='nav-item'>
+                                            <li className='nav-item'>
                                                 <Link
                                                     href='/#newsletter-section'
                                                     activeClassName='active'
@@ -231,7 +308,7 @@ const NavbarStyleFour = () => {
                                                         Newsletter
                                                     </a>
                                                 </Link>
-                                            </li> */}
+                                            </li>
 
                                             <li className='nav-item'>
                                                 <Link
@@ -305,6 +382,7 @@ const NavbarStyleFour = () => {
 
                             <div className='others-option'>
                                 <Link href='/contact'>
+                                    {/* <a className="btn btn-primary">Talk to Us</a> */}
                                     <a
                                         onClick={toggleNavbar}
                                         className='btn btn-primary'

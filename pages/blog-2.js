@@ -85,7 +85,7 @@ const Blog2 = () => {
         <>
             <Navbar />
 
-            <PageBanner pageTitle="Jubilee Financial Blog" />
+            <PageBanner pageTitle1="Jubilee Financial" pageTitle2="Weekly Tax Tips" pageSubTitle='STAY INFORMED' />
 
             <div className="blog-area ptb-80">
                 <div className="container">

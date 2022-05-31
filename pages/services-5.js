@@ -10,7 +10,7 @@ const Services5 = () => {
         <>
             <Navbar />
 
-            <PageBanner pageTitle="Services" />
+            <PageBanner pageTitle="Jubilee Services" />
 
             <div className="agency-services-area ptb-80 pb-50">
                 <div className="container">

@@ -75,17 +75,11 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="contact-area ptb-80">
+        <div className="contact-area pb-80">
             <div className="container">
-                <div className="section-title">
-                    <h2>Get In Touch With Us</h2>
-                    <div className="bar"></div>
-                    <p>Anything On your Mind. We'll Be Glad To Assist You!</p>
-                </div>
-
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-12">
-                        <img src="/images/contact-img.png" alt="image" />
+                        <img src="/images/bigdata-analytics/contact_img.jpg" alt="image" />
                     </div>
 
                     <div className="col-lg-6 col-md-12">

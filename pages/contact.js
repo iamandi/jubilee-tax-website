@@ -11,13 +11,14 @@ const Contact = () => {
         <>
             <Navbar />
 
-            <PageBanner pageTitle="Contact Us" />
+            <PageBanner pageTitle1="Get in" pageTitle2="touch" pageSubTitle='CONTACT US TODAY!' />
 
             <ContactInfo />
 
+            <ContactForm />
+
             <GoogleMap />
 
-            <ContactForm />
 
             <Footer />
         </>

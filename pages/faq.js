@@ -16,7 +16,7 @@ const FAQ = () => {
         <>
             <Navbar />
 
-            <PageBanner pageTitle="FAQ" />
+            <PageBanner pageTitle1="Frequently" pageTitle2="Asked Questions" pageSubTitle='FIND THE RIGHT ANSWER' />
 
             <div className="faq-area ptb-80">
                 <div className="container">
