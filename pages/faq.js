@@ -530,13 +530,7 @@ const FAQ = () => {
 
                                 <div className="btn-bigdata" style={{ marginTop: '5%' }}>
                                     <Link href="/contact">
-                                        <button className="pushable">
-                                            <span className="shadow" />
-                                            <span className="edge" />
-                                            <span className="front">
-                                                Contact Us
-                                            </span>
-                                        </button>
+                                        <a className="btn btn-primary">Contact Us</a>
                                     </Link>
                                 </div>
                             </div>

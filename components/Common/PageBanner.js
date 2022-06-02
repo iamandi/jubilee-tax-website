@@ -1,8 +1,8 @@
 import React from 'react';
 
-const PageBanner = ({ pageTitle1, pageTitle2, pageSubTitle, pageQuote }) => {
+const PageBanner = ({ pageTitle1, pageTitle2, pageSubTitle, pageQuote, classes }) => {
     return (
-        <div className="page-title-area">
+        <div className={`page-title-area ${classes}`}>
             <div className="d-table">
                 <div className="d-table-cell">
                     <div className="container">

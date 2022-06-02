@@ -1,14 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
+import PageBanner from '@/components/Common/PageBanner';
 
 const FunFactsArea = () => {
     return (
         <div className="funfacts-area ptb-80">
             <div className="container">
                 <div className="section-title">
-                    <h2>We always try to understand user's expectation</h2>
-                    <div className="bar"></div>
-                    <p>Our mission is to help people understand and get a better handle on their taxes and financial goals, both professionally and personally.</p>
+                    <PageBanner pageTitle1="Free" pageTitle2="Guidance" classes='pt-0' />
+                    <p>Get free business inspiration, trending solutions and consulting tips delivered to your inbox.</p>
                 </div>
 
                 <div className="contact-cta-box">

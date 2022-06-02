@@ -9,8 +9,8 @@ import sortAndSetCategory from "@/utils/SortAndSetCategeory";
 import ShortenText from '@/utils/ShortenText';
 import ToText from '@/utils/ToText';
 
-const MEDIUM_BLOG = 'https://medium.com/@ssaurel'
-const MEDIUM_FEED_BLOG = 'https://medium.com/feed/@ssaurel'
+const MEDIUM_BLOG = 'https://medium.com/@andypuneri'
+const MEDIUM_FEED_BLOG = 'https://medium.com/feed/@andypuneri'
 
 const Blog2 = () => {
     const [itemRows, setItemRows] = useState([]);

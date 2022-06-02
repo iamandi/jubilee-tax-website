@@ -14,7 +14,7 @@ const About1 = () => {
 
             <div className="about-area">
                 <div className="container">
-                    <div className="row align-items-center">
+                    <div className="row">
                         <div className="col-lg-6 col-md-12">
                             <div className="about-image">
                                 <img src="/images/dinese_headshot.jpg" alt="image" />
@@ -41,37 +41,8 @@ const About1 = () => {
                             </p>
                         </div>
                     </div>
-
-                    {/* <div className="about-inner-area">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-4 col-md-6 col-sm-6">
-                                <div className="about-text">
-                                    <h3>Our History</h3>
-                                    <p>We take pride in consistent delivery of 5 star service and results for over 22 years of being in the business.</p>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 col-md-6 col-sm-6">
-                                <div className="about-text">
-                                    <h3>Our Mission</h3>
-                                    <p>To help people understand and get a better handle on their taxes and financial goals, both professionally and personally.</p>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 col-md-6 col-sm-6">
-                                <div className="about-text">
-                                    <h3>Our Services</h3>
-                                    <p>We are the answer to all your tax question, tax preparation and tax planning needs.
-                                        We have you covered.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
             </div>
-
-
-            {/* <Partner /> */}
 
             <FunFactsArea />
 

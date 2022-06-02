@@ -4,17 +4,17 @@ const CALENDLY_LOGIN = 'https://calendly.com/dinesejubilee';
 
 const NewsletterStyleTwo = () => {
     return (
-        <div id="newsletter-section" className="newsletter-area">
-            <div className="container-fluid">
+        <div className="newsletter-area">
+            <div className="container">
                 <div className="row align-items-center">
-                    <div className="col-lg-6 col-md-12">
+                    <div className="col-lg-8 col-md-12">
                         <div className="newsletter-content">
-                            <p>FREE CONSULTATION</p>
+                            <p className='dashed-sub-title'>FREE CONSULTATION</p>
                             <h2>A Professional Is Waiting To Support</h2>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-12 p-0">
-                        <div className="newsletter-image">
+                    <div className="col-lg-4 col-md-12 p-0">
+                        <div className="newsletter-secondary-content">
                             <a
                                 className='btn btn-primary'
                                 href={CALENDLY_LOGIN}
@@ -29,6 +29,7 @@ const NewsletterStyleTwo = () => {
                 </div>
             </div>
         </div>
+
     )
 }
 

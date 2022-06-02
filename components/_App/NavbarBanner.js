@@ -3,8 +3,7 @@ import { Facebook, Linkedin } from 'react-feather';
 
 export default function NavbarBanner() {
   return (
-
-    <div className='container'>
+    <div className='container hide-navbar'>
       <div
         style={{
           display: 'flex',
@@ -19,56 +18,44 @@ export default function NavbarBanner() {
           fontSize: '0.87rem',
           lineHeight: 2.5,
         }}>
-          <div class='btIconWidget  btAccentIconWidget btWidgetWithText'>
-            <div class='btIconWidgetIcon'>
-              <span
-                data-ico-fontawesome=''
-                class='bt_bb_icon_holder'
-              ></span>
-            </div>
-            <div class='btIconWidgetContent'>
-              <span class='btIconWidgetTitle' style={{ marginRight: '0.5rem' }}>
+          <div className='btIconWidget  btAccentIconWidget btWidgetWithText'>
+            <div className='btIconWidgetContent'>
+              <span className='btIconWidgetTitle' style={{ marginRight: '0.5rem' }}>
                 Monday - Friday
               </span>
-              <span class='btIconWidgetText' style={{ opacity: 0.5 }}>8AM - 5PM</span>
+              <span className='btIconWidgetText' style={{ opacity: 0.5 }}>8AM - 5PM</span>
             </div>
           </div>
-          <div class='btIconWidget  btWidgetWithText' style={{ marginLeft: '1.5rem' }}>
-            <div class='btIconWidgetContent'>
-              <span class='btIconWidgetTitle' style={{ marginRight: '0.5rem' }}>
+          <div className='btIconWidget  btWidgetWithText' style={{ marginLeft: '1.5rem' }}>
+            <div className='btIconWidgetContent'>
+              <span className='btIconWidgetTitle' style={{ marginRight: '0.5rem' }}>
                 Saturday - Sunday
               </span>
-              <span class='btIconWidgetText' style={{ opacity: 0.5 }}>
+              <span className='btIconWidgetText' style={{ opacity: 0.5 }}>
                 By Appointment Only
               </span>
             </div>
           </div>
-          <div class='btIconWidget  btAccentIconWidget btWidgetWithText'>
-            <div class='btIconWidgetIcon'>
-              <span
-                data-ico-fontawesome=''
-                class='bt_bb_icon_holder'
-              ></span>
-            </div>
-            <div class='btIconWidgetContent' style={{ marginLeft: '1.5rem' }}>
-              <span class='btIconWidgetTitle' style={{ marginRight: '0.5rem' }}>Office</span>
-              <span class='btIconWidgetText' style={{ opacity: 0.5 }}>
+          <div className='btIconWidget  btAccentIconWidget btWidgetWithText'>
+            <div className='btIconWidgetContent' style={{ marginLeft: '1.5rem' }}>
+              <span className='btIconWidgetTitle' style={{ marginRight: '0.5rem' }}>Office</span>
+              <span className='btIconWidgetText' style={{ opacity: 0.5 }}>
                 330 Franklin Street, Oakland, CA 94607
               </span>
             </div>
           </div>
         </div>
 
-        <div class='topTools btTopToolsRight' style={{
+        <div className='topTools btTopToolsRight' style={{
           display: 'flex',
           justifyContent: 'flex-start',
           color: 'white',
           fontSize: '0.87rem',
           lineHeight: 2.5,
         }}>
-          <div class='btIconWidget  btWidgetWithText'>
-            <div class='btIconWidgetContent'>
-              <span class='btIconWidgetTitle'>
+          <div className='btIconWidget  btWidgetWithText'>
+            <div className='btIconWidgetContent'>
+              <span className='btIconWidgetTitle'>
                 Visit our social pages
               </span>
             </div>

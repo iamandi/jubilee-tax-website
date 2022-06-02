@@ -12,6 +12,9 @@ $default-color: #1f1b50;
 
 /* Max width 767px */
 @media only #{$media} and ($feature_max : $value_two) {
+	.hide-navbar {
+		display: none;
+	}
 	.btn {
 		font-size: 13px;
 		padding: 13px 33px;
@@ -1883,7 +1886,8 @@ $default-color: #1f1b50;
 		display: none;
 
 		background: {
-			image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(/images/bigdata-analytics/mobile-bg.jpg);
+			image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+				url(/images/bigdata-analytics/mobile-bg.jpg);
 			repeat: repeat;
 		}
 		padding: {
@@ -1897,7 +1901,7 @@ $default-color: #1f1b50;
 	.bigdata-analytics-content {
 		text-align: center;
 		max-width: 100%;
-		
+
 		h1 {
 			font-size: 27px;
 			margin-bottom: 20px;
@@ -2381,6 +2385,9 @@ $default-color: #1f1b50;
 
 /* Min width 768px to Max width 991px */
 @media only #{$media} and ($feature_min : $value_three) and ($feature_max : $value_four) {
+	.hide-navbar {
+		display: none;
+	}
 	.main-banner {
 		height: 100%;
 		padding: {
@@ -3049,12 +3056,13 @@ $default-color: #1f1b50;
 			text-shadow: none; //0px 0px #ffffff;
 		}
 	}
-	
+
 	.bigdata-analytics-banner {
 		display: none;
-		
+
 		background: {
-			image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(/images/bigdata-analytics/mobile-bg.jpg);
+			image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+				url(/images/bigdata-analytics/mobile-bg.jpg);
 			repeat: repeat;
 		}
 		padding: {
@@ -3178,22 +3186,22 @@ $default-color: #1f1b50;
 
 			// &.navbar-style-four {
 			// 	background-color: #0e314c;
-			
+
 			// 	.nav-item .nav-link {
 			// 		color: white;
 			// 	}
-			
+
 			// 	li .nav-item .nav-link {
 			// 		color: $default-color;
 			// 	}
-			
+
 			// 	.navbar-toggler {
 			// 		.icon-bar {
 			// 			background: #ffffff;
 			// 		}
 			// 	}
 			// }
-		}	
+		}
 	}
 
 	.startp-nav {
@@ -3631,4 +3639,3 @@ $default-color: #1f1b50;
 		word-spacing: 9999rem;
 	}
 }
-

@@ -66,10 +66,6 @@ export default function NextJsCarousel(props) {
           </Link>
         </div>
       </div>
-      {/* <div className='bigdata-analytics-content'>
-            <img src={livingBenefits.src} alt="image3"/>
-            <p className="legend legend-override-h1">Image 3</p>
-          </div> */}
       <div className='bigdata-analytics-content'>
         <img src={retirementPlanning.src} alt="image4" />
         <div className="legend-override">

@@ -1,5 +1,8 @@
 /* Max width 767px */
 @media only screen and (max-width: 767px) {
+  .hide-navbar {
+    display: none;
+  }
   .btn {
     font-size: 13px;
     padding: 13px 33px;
@@ -1803,6 +1806,9 @@
 
 /* Min width 768px to Max width 991px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .hide-navbar {
+    display: none;
+  }
   .main-banner {
     height: 100%;
     padding-top: 185px;

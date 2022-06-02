@@ -7,14 +7,14 @@ const DiscoverArea = () => {
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-7 col-md-12">
-                        <div className="discover-content">
+                        <div className="discover-content animate__animated animate__slideInLeft animate__faster">
                             <h5>GRAND OPENING</h5>
                             <h1>Visit Us At Our New Location!</h1>
                         </div>
                     </div>
 
                     <div className="col-lg-5 col-md-12">
-                        <div className="secondary-content">
+                        <div className="secondary-content animate__animated animate__slideInRight animate__faster">
                             <div className="icon-holder">
                                 <MapPin />
                             </div>
